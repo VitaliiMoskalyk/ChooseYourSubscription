@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/VitaliiMoskalyk/ChooseYourSubscription/static/css/main.7acaea2f.css",
+    "main.js": "/VitaliiMoskalyk/ChooseYourSubscription/static/js/main.bac393ac.js",
+    "static/js/787.9b899b98.chunk.js": "/VitaliiMoskalyk/ChooseYourSubscription/static/js/787.9b899b98.chunk.js",
+    "index.html": "/VitaliiMoskalyk/ChooseYourSubscription/index.html",
+    "main.7acaea2f.css.map": "/VitaliiMoskalyk/ChooseYourSubscription/static/css/main.7acaea2f.css.map",
+    "main.bac393ac.js.map": "/VitaliiMoskalyk/ChooseYourSubscription/static/js/main.bac393ac.js.map",
+    "787.9b899b98.chunk.js.map": "/VitaliiMoskalyk/ChooseYourSubscription/static/js/787.9b899b98.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7acaea2f.css",
+    "static/js/main.bac393ac.js"
+  ]
+}
