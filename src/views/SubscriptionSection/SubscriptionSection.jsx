@@ -1,12 +1,13 @@
-import Button from 'components/Button/Button';
 import NetflixPic from '../../images/Netflix.jpg';
 import SpotifyPic from '../../images/Spotify.jpg';
 import YouTubePic from '../../images/YouTube.jpg';
 import ProviderBlock from 'components/ProviderBlock/ProviderBlock';
+import { Title2 } from './SubscriptionSection.styled';
+
 const SubscriptionSection = () => {
   return (
-    <>
-      <h2>Choose a subscription</h2>
+    <section>
+      <Title2>Choose a subscription</Title2>
       <ul>
         <li>
           <ProviderBlock
@@ -31,7 +32,7 @@ const SubscriptionSection = () => {
           />
         </li>
       </ul>
-    </>
+    </section>
   );
 };
 

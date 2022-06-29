@@ -1,12 +1,26 @@
 import Button from 'components/Button/Button';
+import {
+  Img,
+  Border,
+  ContentBox,
+  Title3,
+  Paragr,
+} from './ProviderBlock.styled';
+
 const ProviderBlock = ({ imgSrc, title, subscr }) => {
   return (
-    <>
-      <img src={imgSrc} alt="provider" width="327" />
-      <h3>{title}</h3>
-      <p>{subscr}</p>
-      <Button>Learn more</Button>
-    </>
+    <Border>
+      <Img src={imgSrc} alt="provider" width="327" />
+      <ContentBox>
+        <Title3>
+          <b>{title}</b>
+        </Title3>
+        <Paragr>{subscr}</Paragr>
+        <Button blue>
+          <b>Learn more</b>
+        </Button>
+      </ContentBox>
+    </Border>
   );
 };
 

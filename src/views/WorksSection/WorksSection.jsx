@@ -1,45 +1,66 @@
-import Button from 'components/Button/Button';
-import sprite from '../../images/sprite.svg';
+import {
+  Title2,
+  Wrap,
+  Title3,
+  Paragr,
+  BlueBlock,
+  Title3blue,
+  ParagrBlue,
+  ClickWrap,
+  Link,
+  CopyButton,
+} from './WorksSection.styled';
+import copy from 'copy-to-clipboard';
+import Svg from 'components/Svg/Svg';
+
 const WorksSection = () => {
   return (
     <>
-      <h2>How it works?</h2>
+      <Title2>How it works?</Title2>
       <ul>
-        <li>
-          <h3>Step 1</h3>
-          <svg width="93" height="93">
-            <use href={`${sprite}#icon-Bell`}></use>
-          </svg>
-          <p>Enter your account information</p>
-        </li>
-        <li>
-          <h3>Step 2</h3>
-          <svg width="93" height="93">
-            <use href={`${sprite}#icon-Chats`}></use>
-          </svg>
-          <p>Select the desired subscription and plan</p>
-        </li>
-        <li>
-          <h3>Step 3</h3>
-          <svg width="93" height="93">
-            <use href={`${sprite}#icon-Successful`}></use>
-          </svg>
-          <p>Pay your bill with PayPal</p>
-        </li>
+        <Wrap>
+          <Title3>Step 1</Title3>
+          <Svg width="93" height="93" icon="icon-Bell" />
+
+          <Paragr>Enter your account information</Paragr>
+        </Wrap>
+        <Wrap>
+          <Title3>Step 2</Title3>
+          <Svg width="93" height="93" icon="icon-Chats" />
+
+          <Paragr>Select the desired subscription and plan</Paragr>
+        </Wrap>
+        <Wrap>
+          <Title3>Step 3</Title3>
+          <Svg width="93" height="93" icon="icon-Successful" />
+
+          <Paragr>Pay your bill with PayPal</Paragr>
+        </Wrap>
       </ul>
-      <div>
-        <h3>Invite friends</h3>
-        <p>
+      <BlueBlock>
+        <Title3blue>Invite friends</Title3blue>
+        <ParagrBlue>
           Starting today up to 50% for NETFLIX, YOUTUBE, SPOTIFY subscriptions
           with a secure payment from PAYPAL
-        </p>
-        <Button>
-          Click on the link <a href="#">Discounts On Services</a>
-          <svg width="18.42" height="18.42">
-            <use href={`${sprite}#icon-Copy`}></use>
-          </svg>
-        </Button>
-      </div>
+        </ParagrBlue>
+        <ClickWrap>
+          Click on the link
+          <CopyButton
+            type="button"
+            onClick={() =>
+              copy('Discounts On Services', {
+                debug: true,
+                message: 'Press #{key} to copy',
+              })
+            }
+          >
+            <Link>
+              <b>Discounts On Services</b>
+            </Link>
+            <Svg width="18.42" height="18.42" icon="icon-Copy" />
+          </CopyButton>
+        </ClickWrap>
+      </BlueBlock>
     </>
   );
 };

@@ -1,38 +1,79 @@
 import Button from 'components/Button/Button';
+import Svg from 'components/Svg/Svg';
+
+import {
+  Title2,
+  BorderWrap,
+  Parag,
+  Title4,
+  WrapBtn,
+  BlueBlock,
+  Article,
+  BtnTxt,
+  Section,
+} from './FAQ.styled';
 
 const FAQSection = () => {
   return (
-    <>
-      <h2>FAQ</h2>
+    <Section id="FAQ">
+      <Title2>FAQ</Title2>
       <li>
-        <h4>
-          The set time has passed, but the invoice has not yet arrived, what
-          should I do?
-        </h4>
+        <BorderWrap>
+          <Title4>
+            The set time has passed, but the invoice has not yet arrived, what
+            should I do?
+          </Title4>
+          <Svg width="40" height="40" icon="icon-Open" />
+        </BorderWrap>
       </li>
       <li>
-        <h4>
-          Can I change my Netflix account email and password after purchase?
-        </h4>
+        <BorderWrap>
+          <Title4>
+            Can I change my Netflix account email and password after purchase?
+          </Title4>
+          <Svg width="40" height="40" icon="icon-Open" />
+        </BorderWrap>
       </li>
-      <li>
-        <h4>Can I add a phone number for password recovery?</h4>
-      </li>
-      <li>
-        <h4>How soon will I receive the account information I ordered?</h4>
-      </li>
-      <li>
-        <h4>How to pay?</h4>
-        <p>Payment options we currently have: PayPal, Bitcoin.</p>
-      </li>
-      <Button>Support</Button>
 
-      <div>
-        <h4>Request for an additional subscription that was not found here</h4>
-        <p>Disney, Amazon Prime, Microsoft Office, Microsoft Windows</p>
-        <Button>Request</Button>
-      </div>
-    </>
+      <li>
+        <BorderWrap>
+          <Title4>Can I add a phone number for password recovery?</Title4>
+          <Svg width="40" height="40" icon="icon-Open" />
+        </BorderWrap>
+      </li>
+      <li>
+        <BorderWrap>
+          <Title4>
+            How soon will I receive the account information I ordered?
+          </Title4>
+          <Svg width="40" height="40" icon="icon-Open" />
+        </BorderWrap>
+      </li>
+      <li>
+        <BorderWrap>
+          <Title4>How to pay?</Title4>
+          <Svg width="40" height="40" icon="icon-Open" />
+          <Parag>Payment options we currently have: PayPal, Bitcoin.</Parag>
+        </BorderWrap>
+      </li>
+      <WrapBtn>
+        <Button black>
+          <b>Support</b>
+        </Button>
+      </WrapBtn>
+
+      <BlueBlock>
+        <Title4>
+          Request for an additional subscription that was not found here
+        </Title4>
+        <Article>
+          Disney, Amazon Prime, Microsoft Office, Microsoft Windows
+        </Article>
+        <Button white>
+          <BtnTxt>Request</BtnTxt>
+        </Button>
+      </BlueBlock>
+    </Section>
   );
 };
 

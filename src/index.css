@@ -6,12 +6,13 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    font-family: 'Gotham Pro',
+        sans-serif;
+      font-style: normal;
+      font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #ECF3FB;
+  background-color: #fff;
 }
 
 html,
@@ -60,7 +61,7 @@ section {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
+  /* font: inherit; */
   vertical-align: baseline;
 }
 
@@ -86,6 +87,7 @@ body {
 ol,
 ul {
   list-style: none;
+  padding: 0;
 }
 
 li {
@@ -108,4 +110,7 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+a {
+  text-decoration: none;
 }
