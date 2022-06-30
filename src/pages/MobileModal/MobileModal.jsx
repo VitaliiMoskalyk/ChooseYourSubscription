@@ -28,7 +28,7 @@ const MobileModal = ({ onClose }) => {
   });
 
   const close = e => {
-    if (e.code === 'Escape') onClose();
+    if (e.target === e.currentTarget || e.code === 'Escape') onClose();
   };
 
   return (
