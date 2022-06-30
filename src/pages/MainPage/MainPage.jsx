@@ -21,16 +21,19 @@ const MainPage = () => {
   return (
     <>
       <Header opener={handleClick} svgStatus={isOpen} />
-
-      <Wrapper>
-        {isOpen && <MobileModal onClose={handleClick} />}
-        <HelloSection />
-        <SubscriptionSection />
-        <WorksSection />
-        <AboutSection />
-        <FAQSection />
-      </Wrapper>
-      <Footer />
+      {isOpen && <MobileModal onClose={handleClick} />}
+      {!isOpen && (
+        <>
+          <Wrapper>
+            <HelloSection />
+            <SubscriptionSection />
+            <WorksSection />
+            <AboutSection />
+            <FAQSection />
+          </Wrapper>
+          <Footer />
+        </>
+      )}
     </>
   );
 };

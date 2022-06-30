@@ -23,7 +23,6 @@ export const ModalContent = styled.div`
   background-color: #ecf3fb;
   margin-left: auto;
   margin-right: auto;
-  z-index: 999;
 `;
 export const PageNav = styled.div`
   box-shadow: 0px 12px 28px rgba(177, 177, 177, 0.2);

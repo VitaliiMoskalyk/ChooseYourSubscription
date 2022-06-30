@@ -1,5 +1,5 @@
 import { useWindowWidth } from '@react-hook/window-size';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 const { default: Button } = require('components/Button/Button');
 const { default: SocialMedia } = require('components/SocialMedia/SocialMedia');
