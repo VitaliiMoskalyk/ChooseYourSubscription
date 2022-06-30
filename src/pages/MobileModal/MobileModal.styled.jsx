@@ -1,15 +1,15 @@
 import styled from '@emotion/styled';
 
 export const ModalWrapper = styled.div`
-  position: absolute;
+  position: fixed;
   top: 54px;
 
   left: 0;
 
   width: 100%;
-
+  height: 100vh;
   background-color: #ecf3fb;
-  z-index: 0;
+  overflow: auto;
 `;
 
 export const ModalContent = styled.div`
@@ -23,6 +23,7 @@ export const ModalContent = styled.div`
   background-color: #ecf3fb;
   margin-left: auto;
   margin-right: auto;
+  z-index: 999;
 `;
 export const PageNav = styled.div`
   box-shadow: 0px 12px 28px rgba(177, 177, 177, 0.2);

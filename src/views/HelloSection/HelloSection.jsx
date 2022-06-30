@@ -5,7 +5,7 @@ import { BlueBlock, ImgWrapper, Title2, Paragr2 } from './HelloSection.styled';
 
 const HelloSection = () => {
   return (
-    <section>
+    <section id="Home">
       <ImgWrapper>
         <ImageBlock src={HelloPic} alt="Hello picture" id="HelloSection" />
       </ImgWrapper>

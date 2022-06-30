@@ -4,18 +4,34 @@ import {
   WorksSection,
   AboutSection,
   FAQSection,
+  Header,
+  Footer,
 } from '../../views';
 import Wrapper from '../../components/Wrapper/Wrapper';
+import { useState } from 'react';
+import MobileModal from 'pages/MobileModal/MobileModal';
 
 const MainPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <Wrapper>
-      <HelloSection />
-      <SubscriptionSection />
-      <WorksSection />
-      <AboutSection />
-      <FAQSection />
-    </Wrapper>
+    <>
+      <Header opener={handleClick} svgStatus={isOpen} />
+
+      <Wrapper>
+        {isOpen && <MobileModal onClose={handleClick} />}
+        <HelloSection />
+        <SubscriptionSection />
+        <WorksSection />
+        <AboutSection />
+        <FAQSection />
+      </Wrapper>
+      <Footer />
+    </>
   );
 };
 
