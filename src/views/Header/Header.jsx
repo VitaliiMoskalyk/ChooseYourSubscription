@@ -1,15 +1,55 @@
 import Svg from 'components/Svg/Svg';
 import MainLogo from '../../images/mainLogo.png';
-import { Head } from './Header.styled';
+import {
+  Head,
+  SocialMediaWrapper,
+  SiteNavigationWrapper,
+  SubscriptionsWrapper,
+  LanguageWrapper,
+  SiteNavTitle,
+  LanguageTitle,
+  ButtonWrapper,
+} from './Header.styled';
 import { useWindowWidth } from '@react-hook/window-size';
+import SocialMedia from 'components/SocialMedia/SocialMedia';
+import LogoTitle from 'components/header_LogoTitle/LogoTitle';
+import SiteNavigation from 'components/SiteNavigation/SiteNavigation';
+import LogInBtn from 'components/header_LogInBtn/LogInBtn';
 
 const Header = ({ opener, svgStatus }) => {
   const onlyWidth = useWindowWidth();
 
   return (
     <Head>
-      <img src={MainLogo} alt="MainLogo" width="32" />
-      {onlyWidth < 767 && (
+      <LogoTitle logo={MainLogo} />
+
+      {onlyWidth > 1440 && (
+        <>
+          <SubscriptionsWrapper>
+            <SiteNavTitle>Subscriptions</SiteNavTitle>
+            <Svg icon="icon-Lang" width="12" fill="#333333" height="12" />
+          </SubscriptionsWrapper>
+
+          <SiteNavigationWrapper>
+            <SiteNavigation />
+          </SiteNavigationWrapper>
+
+          <SocialMediaWrapper>
+            <SocialMedia fill="#333333" width="24" />
+          </SocialMediaWrapper>
+
+          <LanguageWrapper>
+            <LanguageTitle>EN</LanguageTitle>
+            <Svg icon="icon-Lang" width="12" fill="#333333" height="12" />
+          </LanguageWrapper>
+
+          <ButtonWrapper>
+            <LogInBtn>Log in</LogInBtn>
+          </ButtonWrapper>
+        </>
+      )}
+
+      {onlyWidth < 1439 && (
         <div onClick={opener}>
           {svgStatus ? (
             <Svg width="28" height="28" icon="icon-CloseModal" />

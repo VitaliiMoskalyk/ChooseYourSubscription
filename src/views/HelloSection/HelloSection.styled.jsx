@@ -2,6 +2,16 @@ import styled from '@emotion/styled';
 
 export const ImgWrapper = styled.div`
   padding-top: 48px;
+
+  @media (min-width: 768px) {
+    padding-top: 0;
+    width: 344px;
+    height: 291px;
+  }
+  @media (min-width: 1440px) {
+    width: 592px;
+    height: 500px;
+  }
 `;
 
 export const BlueBlock = styled.div`
@@ -13,6 +23,16 @@ export const BlueBlock = styled.div`
   margin-top: 16px;
 
   color: #ffffff;
+  @media (min-width: 768px) {
+    width: 344px;
+    height: 291px;
+    margin-top: 0;
+  }
+  @media (min-width: 1440px) {
+    width: 592px;
+    height: 500px;
+    padding: 114px 50px;
+  }
 `;
 
 export const Title2 = styled.h2`
@@ -28,4 +48,16 @@ export const Paragr2 = styled.p`
 
   margin-top: 16px;
   margin-bottom: 31px;
+`;
+
+export const Section = styled.section`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-top: 52px;
+  }
+  @media (min-width: 1440px) {
+    padding-top: 60px;
+  }
 `;

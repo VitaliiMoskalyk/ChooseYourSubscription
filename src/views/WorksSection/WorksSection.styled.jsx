@@ -24,6 +24,15 @@ export const Wrap = styled.li`
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: center;
+
+  @media (min-width: 768px) {
+    width: 224px;
+    height: 186px;
+  }
+  @media (min-width: 1440px) {
+    width: 388px;
+    height: 300px;
+  }
 `;
 
 export const Title3 = styled.h3`
@@ -49,6 +58,12 @@ export const BlueBlock = styled.div`
   margin-top: 16px;
 
   color: #ffffff;
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+  }
 `;
 
 export const Title3blue = styled.h3`
@@ -64,6 +79,9 @@ export const ParagrBlue = styled.p`
   color: #fff;
 
   margin-top: 16px;
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
 `;
 
 export const ClickWrap = styled.div`
@@ -78,6 +96,18 @@ export const ClickWrap = styled.div`
 
   color: #171717;
   text-align: center;
+  @media (min-width: 768px) {
+    margin-top: 0;
+    padding: 20px 24px;
+    width: 336px;
+    height: 104px;
+  }
+  @media (min-width: 1440px) {
+    margin-top: 0;
+    padding: 28px 72px;
+    width: 445px;
+    height: 123px;
+  }
 `;
 
 export const Link = styled.span`
@@ -98,4 +128,18 @@ export const CopyButton = styled.button`
   padding: 0;
   background-color: inherit;
   cursor: pointer;
+`;
+
+export const HowWrapper = styled.ul`
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
+export const BlueBlockWrapper = styled.div`
+  width: 275px;
+  @media (min-width: 1440px) {
+    width: 508px;
+  }
 `;

@@ -7,13 +7,14 @@ import {
   Navigate,
   Title4,
   Links,
-  Lang,
-  Span,
+  SiteNavigationWrapper,
+  SocialMediaWrapper,
   Span1,
   Span3,
   Span4,
   SocialItem,
 } from './Footer.styled';
+import SiteNavigation from 'components/SiteNavigation/SiteNavigation';
 
 const Footer = () => {
   return (
@@ -34,25 +35,18 @@ const Footer = () => {
               <SocialItem>Spotify</SocialItem>
             </Links>
           </span>
+
           <span>
             <Title4>Site navigation</Title4>
-            <Links>
-              <Lang href="#AboutSection">
-                <SocialItem>About</SocialItem>
-              </Lang>
-              <Lang href="#FAQ">
-                <SocialItem>FAQ</SocialItem>
-              </Lang>
-
-              <Lang href="#">
-                <SocialItem>Support</SocialItem>
-              </Lang>
-            </Links>
+            <SiteNavigationWrapper>
+              <SiteNavigation />
+            </SiteNavigationWrapper>
           </span>
         </Navigate>
-        <Span>
-          <SocialMedia fill="#fff" />
-        </Span>
+
+        <SocialMediaWrapper>
+          <SocialMedia fill="#fff" width="26.67" />
+        </SocialMediaWrapper>
 
         <Span3>
           <hr />

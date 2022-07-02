@@ -13,6 +13,7 @@ const {
   ButtonWrap,
   ModalWrapper,
   ModalContent,
+  SocialMediaWrapper,
 } = require('./MobileModal.styled');
 
 const MobileModal = ({ onClose }) => {
@@ -32,7 +33,7 @@ const MobileModal = ({ onClose }) => {
   };
 
   return (
-    onlyWidth < 767 && (
+    onlyWidth < 1439 && (
       <ModalWrapper onClick={close}>
         <ModalContent>
           <PageNav>
@@ -82,12 +83,15 @@ const MobileModal = ({ onClose }) => {
               </NavItem>
             </ul>
           </PageNav>
+
           <ButtonWrap>
             <Button blue>Login</Button>
-
             <Button blue>Sign up</Button>
           </ButtonWrap>
-          <SocialMedia fill="#333333" />
+
+          <SocialMediaWrapper>
+            <SocialMedia fill="#333333" width="26.67" />
+          </SocialMediaWrapper>
         </ModalContent>
       </ModalWrapper>
     )

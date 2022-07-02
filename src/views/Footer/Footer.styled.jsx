@@ -46,6 +46,7 @@ export const Navigate = styled.nav`
 export const Title4 = styled.h4`
   font-size: 18px;
   line-height: 1.5;
+  margin-bottom: 16px;
 `;
 
 export const Links = styled.ul`
@@ -56,9 +57,10 @@ export const Links = styled.ul`
   margin-bottom: 42.67px;
 `;
 
-export const Span = styled.div`
-  display: flex;
-  justify-content: space-between;
+export const SocialMediaWrapper = styled.div`
+  width: 80px;
+  height: 32px;
+  margin-bottom: 40px;
 `;
 export const Lang = styled.a`
   font-size: 17px;
@@ -81,9 +83,14 @@ export const Span3 = styled.span`
 export const SocialItem = styled.li`
   font-size: 16px;
   line-height: 1.5;
-  margin-top: 12px;
+  margin: 6px 0;
 `;
 
 export const Span4 = styled.div`
   background-color: #1749b3;
+`;
+
+export const SiteNavigationWrapper = styled.div`
+  width: 65px;
+  height: 96px;
 `;

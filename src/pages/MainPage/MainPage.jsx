@@ -24,7 +24,7 @@ const MainPage = () => {
       {isOpen && <MobileModal onClose={handleClick} />}
       {!isOpen && (
         <>
-          <Wrapper>
+          <Wrapper id="MainPage">
             <HelloSection />
             <SubscriptionSection />
             <WorksSection />

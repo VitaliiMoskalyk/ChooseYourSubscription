@@ -1,22 +1,22 @@
 import Svg from 'components/Svg/Svg';
-import { SocialLinks, SocialMed } from './SocialMedia.styled';
+import { SocialLinks } from './SocialMedia.styled';
 
-const SocialMedia = ({ fill }) => {
+const SocialMedia = ({ fill, width }) => {
   return (
     <SocialLinks>
-      <SocialMed>
+      <li>
         <a
           href="https://api.whatsapp.com/send? phone=380502090950"
           target="blank"
         >
-          <Svg width="32" height="32" icon="icon-whatsapp" fill={fill} />
+          <Svg width={width} height={width} icon="icon-whatsapp" fill={fill} />
         </a>
-      </SocialMed>
-      <SocialMed>
+      </li>
+      <li>
         <a href="tg://resolve?domain=MVitalikM" target="blank">
-          <Svg width="32" height="32" icon="icon-telegram" fill={fill} />
+          <Svg width={width} height={width} icon="icon-telegram" fill={fill} />
         </a>
-      </SocialMed>
+      </li>
     </SocialLinks>
   );
 };

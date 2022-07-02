@@ -17,6 +17,16 @@ export const BorderWrap = styled.div`
 
   padding: 20px;
   margin-top: 16px;
+
+  @media (min-width: 767px) {
+    width: 344px;
+    height: 412px;
+    margin-top: 0;
+  }
+  @media (min-width: 1440px) {
+    width: 592px;
+    height: 535px;
+  }
 `;
 
 export const Paragr = styled.p`
@@ -25,4 +35,24 @@ export const Paragr = styled.p`
   color: #333;
 
   margin-top: 16px;
+`;
+
+export const AboutWrapper = styled.div`
+  @media (min-width: 767px) {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+`;
+
+export const ImageWrapper = styled.div`
+  @media (min-width: 767px) {
+    width: 344px;
+    height: 412px;
+  }
+  @media (min-width: 1440px) {
+    width: 592px;
+    height: 535px;
+  }
 `;

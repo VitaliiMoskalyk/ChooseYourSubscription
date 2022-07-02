@@ -1,11 +1,17 @@
 import HelloPic from '../../images/MainPic.jpg';
 import Button from 'components/Button/Button';
 import ImageBlock from 'components/ImageBlock/ImageBlock';
-import { BlueBlock, ImgWrapper, Title2, Paragr2 } from './HelloSection.styled';
+import {
+  BlueBlock,
+  ImgWrapper,
+  Title2,
+  Paragr2,
+  Section,
+} from './HelloSection.styled';
 
 const HelloSection = () => {
   return (
-    <section id="Home">
+    <Section id="Home">
       <ImgWrapper>
         <ImageBlock src={HelloPic} alt="Hello picture" id="HelloSection" />
       </ImgWrapper>
@@ -22,7 +28,7 @@ const HelloSection = () => {
           <b>Start using</b>
         </Button>
       </BlueBlock>
-    </section>
+    </Section>
   );
 };
 

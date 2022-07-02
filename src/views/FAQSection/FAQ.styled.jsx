@@ -37,6 +37,9 @@ export const Parag = styled.p`
 
 export const Title4 = styled.h4`
   max-width: 226px;
+  @media (min-width: 767px) {
+    max-width: 498px;
+  }
 `;
 
 export const WrapBtn = styled.span`

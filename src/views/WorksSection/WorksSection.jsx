@@ -9,6 +9,8 @@ import {
   ClickWrap,
   Link,
   CopyButton,
+  HowWrapper,
+  BlueBlockWrapper,
 } from './WorksSection.styled';
 import copy from 'copy-to-clipboard';
 import Svg from 'components/Svg/Svg';
@@ -17,7 +19,7 @@ const WorksSection = () => {
   return (
     <>
       <Title2>How it works?</Title2>
-      <ul>
+      <HowWrapper>
         <Wrap>
           <Title3>Step 1</Title3>
           <Svg width="93" height="93" icon="icon-Bell" />
@@ -36,13 +38,16 @@ const WorksSection = () => {
 
           <Paragr>Pay your bill with PayPal</Paragr>
         </Wrap>
-      </ul>
+      </HowWrapper>
       <BlueBlock>
-        <Title3blue>Invite friends</Title3blue>
-        <ParagrBlue>
-          Starting today up to 50% for NETFLIX, YOUTUBE, SPOTIFY subscriptions
-          with a secure payment from PAYPAL
-        </ParagrBlue>
+        <BlueBlockWrapper>
+          <Title3blue>Invite friends</Title3blue>
+          <ParagrBlue>
+            Starting today up to 50% for NETFLIX, YOUTUBE, SPOTIFY subscriptions
+            with a secure payment from PAYPAL
+          </ParagrBlue>
+        </BlueBlockWrapper>
+
         <ClickWrap>
           Click on the link
           <CopyButton

@@ -1,15 +1,15 @@
 import styled from '@emotion/styled';
 
 export const ModalWrapper = styled.div`
-  position: fixed;
+  position: absolute;
   top: 54px;
 
   left: 0;
 
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #ecf3fb;
-  overflow: auto;
+  overflow-y: auto;
 `;
 
 export const ModalContent = styled.div`
@@ -17,13 +17,14 @@ export const ModalContent = styled.div`
   width: 100%;
 
   max-width: 375px;
-  height: fit-content;
+  /* height: fit-content; */
 
   padding: 24px;
   background-color: #ecf3fb;
   margin-left: auto;
   margin-right: auto;
 `;
+
 export const PageNav = styled.div`
   box-shadow: 0px 12px 28px rgba(177, 177, 177, 0.2);
   border-radius: 12px;
@@ -68,4 +69,9 @@ export const ButtonWrap = styled.div`
   margin-top: 67px;
   margin-bottom: 38.67px;
   height: 94px;
+`;
+
+export const SocialMediaWrapper = styled.div`
+  width: 80px;
+  height: 32px;
 `;
