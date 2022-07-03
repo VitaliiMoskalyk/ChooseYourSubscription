@@ -7,7 +7,6 @@ import {
   SubscriptionsWrapper,
   LanguageWrapper,
   SiteNavTitle,
-  LanguageTitle,
   ButtonWrapper,
 } from './Header.styled';
 import { useWindowWidth } from '@react-hook/window-size';
