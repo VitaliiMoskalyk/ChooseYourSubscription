@@ -4,13 +4,14 @@ import Svg from 'components/Svg/Svg';
 import {
   Title2,
   BorderWrap,
-  Parag,
+  ReqButtonWrapper,
   Title4,
   WrapBtn,
   BlueBlock,
   Article,
   BtnTxt,
   Section,
+  TextWrapper,
 } from './FAQ.styled';
 
 const FAQSection = () => {
@@ -53,7 +54,7 @@ const FAQSection = () => {
         <BorderWrap>
           <Title4>How to pay?</Title4>
           <Svg width="40" height="40" icon="icon-Open" />
-          <Parag>Payment options we currently have: PayPal, Bitcoin.</Parag>
+          {/* <Parag>Payment options we currently have: PayPal, Bitcoin.</Parag> */}
         </BorderWrap>
       </li>
       <WrapBtn>
@@ -63,15 +64,19 @@ const FAQSection = () => {
       </WrapBtn>
 
       <BlueBlock>
-        <Title4>
-          Request for an additional subscription that was not found here
-        </Title4>
-        <Article>
-          Disney, Amazon Prime, Microsoft Office, Microsoft Windows
-        </Article>
-        <Button white>
-          <BtnTxt>Request</BtnTxt>
-        </Button>
+        <TextWrapper>
+          <Title4>
+            Request for an additional subscription that was not found here
+          </Title4>
+          <Article>
+            Disney, Amazon Prime, Microsoft Office, Microsoft Windows
+          </Article>
+        </TextWrapper>
+        <ReqButtonWrapper>
+          <Button white>
+            <BtnTxt>Request</BtnTxt>
+          </Button>
+        </ReqButtonWrapper>
       </BlueBlock>
     </Section>
   );

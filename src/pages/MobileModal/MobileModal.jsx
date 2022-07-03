@@ -1,4 +1,5 @@
 import { useWindowWidth } from '@react-hook/window-size';
+import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
 import { useEffect } from 'react';
 
 const { default: Button } = require('components/Button/Button');
@@ -14,6 +15,8 @@ const {
   ModalWrapper,
   ModalContent,
   SocialMediaWrapper,
+  ButtonWrapper,
+  SocialWrapper,
 } = require('./MobileModal.styled');
 
 const MobileModal = ({ onClose }) => {
@@ -67,7 +70,7 @@ const MobileModal = ({ onClose }) => {
           <PageNav>
             <ul>
               <NavItem>
-                <Link href="#">
+                <Link href="/netflix">
                   <NavTitle>Netflix</NavTitle>
                 </Link>
               </NavItem>
@@ -85,12 +88,21 @@ const MobileModal = ({ onClose }) => {
           </PageNav>
 
           <ButtonWrap>
-            <Button blue>Login</Button>
-            <Button blue>Sign up</Button>
+            <ButtonWrapper>
+              <Button blue>Login</Button>
+            </ButtonWrapper>
+            <ButtonWrapper>
+              <Button blue>Sign up</Button>
+            </ButtonWrapper>
           </ButtonWrap>
 
           <SocialMediaWrapper>
-            <SocialMedia fill="#333333" width="26.67" />
+            <SocialWrapper>
+              <SocialMedia fill="#333333" width="32" />
+            </SocialWrapper>
+            <div>
+              <LanguageSwitcher fill="#333333" />
+            </div>
           </SocialMediaWrapper>
         </ModalContent>
       </ModalWrapper>

@@ -7,6 +7,7 @@ import {
   Title2,
   Paragr2,
   Section,
+  ButtonWrapper,
 } from './HelloSection.styled';
 
 const HelloSection = () => {
@@ -24,9 +25,11 @@ const HelloSection = () => {
           You have always wanted to get the same product at a special price for
           you, without haggling - and it is yours.
         </Paragr2>
-        <Button onClick={() => console.log('click')} white>
-          <b>Start using</b>
-        </Button>
+        <ButtonWrapper>
+          <Button onClick={() => console.log('click')} white>
+            <b>Start using</b>
+          </Button>
+        </ButtonWrapper>
       </BlueBlock>
     </Section>
   );

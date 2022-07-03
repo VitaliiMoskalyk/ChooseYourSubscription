@@ -13,8 +13,10 @@ import {
   Span3,
   Span4,
   SocialItem,
+  SocialWrapper,
 } from './Footer.styled';
 import SiteNavigation from 'components/SiteNavigation/SiteNavigation';
+import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
 
 const Footer = () => {
   return (
@@ -43,10 +45,14 @@ const Footer = () => {
             </SiteNavigationWrapper>
           </span>
         </Navigate>
-
-        <SocialMediaWrapper>
-          <SocialMedia fill="#fff" width="26.67" />
-        </SocialMediaWrapper>
+        <SocialWrapper>
+          <SocialMediaWrapper>
+            <SocialMedia fill="#fff" width="32" />
+          </SocialMediaWrapper>
+          <div>
+            <LanguageSwitcher fill="#FFFFFF" />
+          </div>
+        </SocialWrapper>
 
         <Span3>
           <hr />

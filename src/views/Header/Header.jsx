@@ -15,6 +15,7 @@ import SocialMedia from 'components/SocialMedia/SocialMedia';
 import LogoTitle from 'components/header_LogoTitle/LogoTitle';
 import SiteNavigation from 'components/SiteNavigation/SiteNavigation';
 import LogInBtn from 'components/header_LogInBtn/LogInBtn';
+import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
 
 const Header = ({ opener, svgStatus }) => {
   const onlyWidth = useWindowWidth();
@@ -39,8 +40,7 @@ const Header = ({ opener, svgStatus }) => {
           </SocialMediaWrapper>
 
           <LanguageWrapper>
-            <LanguageTitle>EN</LanguageTitle>
-            <Svg icon="icon-Lang" width="12" fill="#333333" height="12" />
+            <LanguageSwitcher fill="#333333" />
           </LanguageWrapper>
 
           <ButtonWrapper>

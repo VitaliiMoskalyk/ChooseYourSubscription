@@ -61,3 +61,16 @@ export const Section = styled.section`
     padding-top: 60px;
   }
 `;
+
+export const ButtonWrapper = styled.div`
+  height: 48px;
+  width: 287px;
+  @media (min-width: 768px) {
+    height: 48px;
+    width: 207px;
+  }
+  @media (min-width: 1440px) {
+    height: 54px;
+    width: 207px;
+  }
+`;

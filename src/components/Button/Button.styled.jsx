@@ -9,7 +9,7 @@ export const ButtonWhite = styled.button`
   gap: 10px;
 
   width: 100%;
-  height: 48px;
+  height: 100%;
   border-radius: 16px;
 
   background-color: #fff;
@@ -17,7 +17,7 @@ export const ButtonWhite = styled.button`
 
   :hover,
   :focus {
-    border: 1px solid #1749b3;
+    outline: 1px solid #1749b3;
   }
   :active {
     color: #1749b3;
@@ -33,7 +33,7 @@ export const ButtonBlue = styled.button`
   gap: 10px;
 
   width: 100%;
-  height: 48px;
+  height: 100%;
   border-radius: 16px;
 
   background-color: #1749b3;
@@ -43,7 +43,7 @@ export const ButtonBlue = styled.button`
   :hover,
   :focus {
     background-color: #fff;
-    border: 1px solid #1749b3;
+    outline: 1px solid #1749b3;
     color: #171717;
   }
   :active {
@@ -62,7 +62,7 @@ export const ButtonBlack = styled.button`
   gap: 10px;
 
   width: 100%;
-  height: 48px;
+  height: 100%;
   border-radius: 16px;
 
   background: #333333;
@@ -72,7 +72,7 @@ export const ButtonBlack = styled.button`
   :hover,
   :focus {
     background-color: #fff;
-    border: 1px solid #171717;
+    outline: 1px solid #171717;
     color: #171717;
   }
   :active {

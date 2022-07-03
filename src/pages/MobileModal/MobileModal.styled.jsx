@@ -33,9 +33,8 @@ export const PageNav = styled.div`
 
   width: 100%;
   padding: 16px;
-  :last-of-type {
-    margin-top: 16px;
-  }
+
+  margin-bottom: 16px;
 `;
 
 export const NavTitle = styled.div`
@@ -72,6 +71,16 @@ export const ButtonWrap = styled.div`
 `;
 
 export const SocialMediaWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+export const SocialWrapper = styled.div`
   width: 80px;
   height: 32px;
+`;
+
+export const ButtonWrapper = styled.div`
+  height: 43px;
+  margin-bottom: 8px;
 `;

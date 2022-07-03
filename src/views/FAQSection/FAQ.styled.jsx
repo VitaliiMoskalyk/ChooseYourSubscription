@@ -38,15 +38,22 @@ export const Parag = styled.p`
 export const Title4 = styled.h4`
   max-width: 226px;
   @media (min-width: 767px) {
-    max-width: 498px;
+    max-width: 356px;
+  }
+  @media (min-width: 1140px) {
+    max-width: 704px;
   }
 `;
 
-export const WrapBtn = styled.span`
-  display: flex;
-  justify-content: center;
-
+export const WrapBtn = styled.div`
+  margin-right: auto;
+  margin-left: auto;
+  width: 243px;
+  height: 48px;
   margin-top: 28px;
+  @media (min-width: 1440px) {
+    height: 54px;
+  }
 `;
 
 export const BlueBlock = styled.div`
@@ -60,6 +67,12 @@ export const BlueBlock = styled.div`
   color: #ffffff;
   font-size: 22px;
   line-height: 1.4;
+
+  @media (min-width: 767px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 `;
 
 export const Article = styled.p`
@@ -78,4 +91,24 @@ export const BtnTxt = styled.b`
 export const Section = styled.section`
   height: auto;
   padding-bottom: 80px;
+`;
+
+export const ReqButtonWrapper = styled.div`
+  @media (min-width: 767px) {
+    width: 239px;
+    height: 48px;
+  }
+  @media (min-width: 1440px) {
+    width: 296px;
+    height: 54px;
+  }
+`;
+
+export const TextWrapper = styled.div`
+  @media (min-width: 767px) {
+    width: 356px;
+  }
+  @media (min-width: 1440px) {
+    width: 704px;
+  }
 `;

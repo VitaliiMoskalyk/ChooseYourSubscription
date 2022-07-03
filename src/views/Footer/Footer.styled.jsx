@@ -10,7 +10,11 @@ export const FooterStl = styled.footer`
   max-width: 375px;
 
   @media (min-width: 768px) {
-    padding: 0 32px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 42px 32px 0 32px;
     max-width: 768px;
   }
   @media (min-width: 1440px) {
@@ -24,12 +28,19 @@ export const Span1 = styled.span`
   justify-content: start;
   flex-wrap: wrap;
   align-items: center;
+  @media (min-width: 768px) {
+    display: flex;
+    width: 190px;
+  }
 `;
 
 export const Title2 = styled.h2`
   font-size: 16px;
   line-height: 1.5;
   padding-left: 12px;
+  @media (min-width: 768px) {
+    font-size: 12px;
+  }
 `;
 
 export const Paragh = styled.p`
@@ -41,15 +52,21 @@ export const Navigate = styled.nav`
   flex-direction: row;
 
   margin-top: 40px;
+
+  @media (min-width: 768px) {
+    margin-top: 0;
+  }
 `;
 
 export const Title4 = styled.h4`
   font-size: 18px;
   line-height: 1.5;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 `;
 
 export const Links = styled.ul`
+  display: flex;
+  flex-direction: column;
   font-size: 16px;
   line-height: 1.5;
 
@@ -61,6 +78,9 @@ export const SocialMediaWrapper = styled.div`
   width: 80px;
   height: 32px;
   margin-bottom: 40px;
+  @media (min-width: 768px) {
+    margin-bottom: 20px;
+  }
 `;
 export const Lang = styled.a`
   font-size: 17px;
@@ -70,7 +90,7 @@ export const Lang = styled.a`
   color: #ffffff;
 `;
 
-export const Span3 = styled.span`
+export const Span3 = styled.div`
   text-align: center;
 
   font-size: 15px;
@@ -78,6 +98,9 @@ export const Span3 = styled.span`
   letter-spacing: 0.01em;
   color: #f7f7f7;
   opacity: 0.5;
+  @media (min-width: 768px) {
+    width: 100vw;
+  }
 `;
 
 export const SocialItem = styled.li`
@@ -93,4 +116,13 @@ export const Span4 = styled.div`
 export const SiteNavigationWrapper = styled.div`
   width: 65px;
   height: 96px;
+`;
+
+export const SocialWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  @media (min-width: 768px) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 `;

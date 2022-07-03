@@ -42,10 +42,6 @@ export const SiteNavTitle = styled.span`
   padding-right: 12px;
 `;
 
-export const LanguageTitle = styled.span`
-  padding-right: 6px;
-`;
-
 export const SubscriptionsWrapper = styled.div`
   display: flex;
   align-items: center;

@@ -5,3 +5,10 @@ export const SocialLinks = styled.ul`
   width: 100%;
   justify-content: space-between;
 `;
+
+export const Link = styled.a`
+  :hover,
+  :focus {
+    fill: #1749b3;
+  }
+`;
