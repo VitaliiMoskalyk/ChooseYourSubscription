@@ -23,7 +23,7 @@ const Header = ({ opener, svgStatus }) => {
     <Head>
       <LogoTitle logo={MainLogo} />
 
-      {onlyWidth > 1440 && (
+      {onlyWidth > 1439 && (
         <>
           <SubscriptionsWrapper>
             <SiteNavTitle>Subscriptions</SiteNavTitle>

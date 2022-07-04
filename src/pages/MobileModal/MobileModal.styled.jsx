@@ -1,30 +1,5 @@
 import styled from '@emotion/styled';
 
-export const ModalWrapper = styled.div`
-  position: absolute;
-  top: 54px;
-
-  left: 0;
-
-  width: 100%;
-  min-height: 100vh;
-  background-color: #ecf3fb;
-  overflow-y: auto;
-`;
-
-export const ModalContent = styled.div`
-  position: relative;
-  width: 100%;
-
-  max-width: 375px;
-  /* height: fit-content; */
-
-  padding: 24px;
-  background-color: #ecf3fb;
-  margin-left: auto;
-  margin-right: auto;
-`;
-
 export const PageNav = styled.div`
   box-shadow: 0px 12px 28px rgba(177, 177, 177, 0.2);
   border-radius: 12px;
@@ -51,7 +26,7 @@ export const NavItem = styled.li`
   border-radius: 8px;
 `;
 
-export const Link = styled.a`
+export const Link = styled.div`
   display: flex;
   align-items: center;
   padding: 17px 24px;
