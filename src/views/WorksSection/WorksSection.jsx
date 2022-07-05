@@ -3,17 +3,12 @@ import {
   Wrap,
   Title3,
   Paragr,
-  BlueBlock,
-  Title3blue,
-  ParagrBlue,
-  ClickWrap,
-  Link,
-  CopyButton,
   HowWrapper,
-  BlueBlockWrapper,
 } from './WorksSection.styled';
-import copy from 'copy-to-clipboard';
+
 import Svg from 'components/Svg/Svg';
+
+import Inviting from 'components/Inviting/Inviting';
 
 const WorksSection = () => {
   return (
@@ -39,33 +34,7 @@ const WorksSection = () => {
           <Paragr>Pay your bill with PayPal</Paragr>
         </Wrap>
       </HowWrapper>
-      <BlueBlock>
-        <BlueBlockWrapper>
-          <Title3blue>Invite friends</Title3blue>
-          <ParagrBlue>
-            Starting today up to 50% for NETFLIX, YOUTUBE, SPOTIFY subscriptions
-            with a secure payment from PAYPAL
-          </ParagrBlue>
-        </BlueBlockWrapper>
-
-        <ClickWrap>
-          Click on the link
-          <CopyButton
-            type="button"
-            onClick={() =>
-              copy('Discounts On Services', {
-                debug: true,
-                message: 'Press #{key} to copy',
-              })
-            }
-          >
-            <Link>
-              <b>Discounts On Services</b>
-            </Link>
-            <Svg width="18.42" height="18.42" icon="icon-Copy" />
-          </CopyButton>
-        </ClickWrap>
-      </BlueBlock>
+      <Inviting />
     </>
   );
 };
