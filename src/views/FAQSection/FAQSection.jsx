@@ -1,18 +1,7 @@
 import Button from 'components/Button/Button';
 import Svg from 'components/Svg/Svg';
 
-import {
-  Title2,
-  BorderWrap,
-  ReqButtonWrapper,
-  Title4,
-  WrapBtn,
-  BlueBlock,
-  Article,
-  BtnTxt,
-  Section,
-  TextWrapper,
-} from './FAQ.styled';
+import { Title2, BorderWrap, Title4, WrapBtn, Section } from './FAQ.styled';
 
 const FAQSection = () => {
   return (
@@ -58,26 +47,8 @@ const FAQSection = () => {
         </BorderWrap>
       </li>
       <WrapBtn>
-        <Button black>
-          <b>Support</b>
-        </Button>
+        <Button primary>Support</Button>
       </WrapBtn>
-
-      <BlueBlock>
-        <TextWrapper>
-          <Title4>
-            Request for an additional subscription that was not found here
-          </Title4>
-          <Article>
-            Disney, Amazon Prime, Microsoft Office, Microsoft Windows
-          </Article>
-        </TextWrapper>
-        <ReqButtonWrapper>
-          <Button white>
-            <BtnTxt>Request</BtnTxt>
-          </Button>
-        </ReqButtonWrapper>
-      </BlueBlock>
     </Section>
   );
 };

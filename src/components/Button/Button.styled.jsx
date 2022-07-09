@@ -1,83 +1,54 @@
 import styled from '@emotion/styled';
 
-export const ButtonWhite = styled.button`
+export const Button1 = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 16px 24px;
+  padding: 16px 4px;
   gap: 10px;
+  overflow: hidden;
+  white-space: nowrap;
 
   width: 100%;
   height: 100%;
   border-radius: 16px;
 
-  background-color: #fff;
+  background-color: ${props =>
+    props.primary ? props.theme.color.black1 : props.theme.color.blue};
+  color: ${props => props.theme.color.white};
   border: none;
 
-  :hover,
-  :focus {
-    outline: 1px solid #1749b3;
+  transition: background-color 0.5s;
+
+  :hover {
+    background-color: ${props => props.theme.color.white};
+    outline: 1px solid
+      ${props =>
+        props.primary ? props.theme.color.black1 : props.theme.color.blue};
+    color: ${props => props.theme.color.black2};
   }
-  :active {
-    color: #1749b3;
+  :active,
+  :focus {
+    background-color: ${props => (props.primary ? '#606060' : '#4B84FD')};
+    outline: none;
+    color: ${props => props.theme.color.white};
   }
 `;
 
-export const ButtonBlue = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 24px;
-  gap: 10px;
+export const Button2 = styled(Button1)`
+  background-color: ${props => props.theme.color.white};
+  color: ${props => props.theme.color.black2};
 
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
-
-  background-color: #1749b3;
-  color: #ffffff;
-  border: none;
-
-  :hover,
+  :hover {
+    background-color: ${props => props.theme.color.blue};
+    outline: 1px solid ${props => props.theme.color.white};
+    color: ${props => props.theme.color.white};
+  }
+  :active,
   :focus {
-    background-color: #fff;
-    outline: 1px solid #1749b3;
-    color: #171717;
-  }
-  :active {
-    background-color: #4b84fd;
-    border: none;
-    color: #ffffff;
-  }
-`;
-
-export const ButtonBlack = styled.button`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  padding: 16px 24px;
-  gap: 10px;
-
-  width: 100%;
-  height: 100%;
-  border-radius: 16px;
-
-  background: #333333;
-  color: #ffffff;
-  border: none;
-
-  :hover,
-  :focus {
-    background-color: #fff;
-    outline: 1px solid #171717;
-    color: #171717;
-  }
-  :active {
-    background-color: #606060;
-    border: none;
-    color: #ffffff;
+    background-color: ${props => 'rgba(255, 255, 255, 0.8)'};
+    outline: none;
+    color: ${props => props.theme.color.black2};
   }
 `;

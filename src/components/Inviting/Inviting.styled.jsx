@@ -15,6 +15,10 @@ export const InviteBlock = styled.div`
     justify-content: space-between;
     padding: 32px;
   }
+
+  @media (min-width: 1440px) {
+    padding: 40px 80px;
+  }
 `;
 
 export const Title = styled.h3`

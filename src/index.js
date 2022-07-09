@@ -4,12 +4,25 @@ import { App } from 'components/App';
 import reportWebVitals from './reportWebVitals';
 import './index.css';
 import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider } from '@emotion/react';
 
+const theme = {
+  color: {
+    blue: '#1749B3',
+    red: '#FE0000',
+    black1: '#333333',
+    black2: '#171717',
+    background: '#ECF3FB',
+    white: '#FFFFFF',
+  },
+};
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename="/ChooseYourSubscription/">
-      <App />
-    </BrowserRouter>
+    <ThemeProvider theme={theme}>
+      <BrowserRouter basename="/ChooseYourSubscription/">
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

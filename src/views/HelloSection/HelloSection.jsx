@@ -26,7 +26,7 @@ const HelloSection = () => {
           you, without haggling - and it is yours.
         </Paragr2>
         <ButtonWrapper>
-          <Button onClick={() => console.log('click')} white>
+          <Button onClick={() => console.log('click')} invert>
             <b>Start using</b>
           </Button>
         </ButtonWrapper>

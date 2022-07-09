@@ -7,11 +7,23 @@ export const Wrapper = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  /* align-items: center; */
   padding: 32px 16px;
 
   margin-bottom: 16px;
+  @media (min-width: 768px) {
+    width: 224px;
+    margin-right: 16px;
+    :last-of-type {
+      margin-right: 0px;
+    }
+    margin-bottom: 0px;
+  }
+  @media (min-width: 1440px) {
+    width: 389px;
+    padding: 60px 40px;
+  }
 `;
 
 export const Hr = styled.hr`
@@ -31,16 +43,23 @@ export const BlockTitle = styled.h3`
   color: #0f0f0f;
 
   margin-bottom: 20px;
+  @media (min-width: 1440px) {
+    font-size: 32px;
+  }
 `;
 
 export const ItemWrapper = styled.div`
   font-weight: 400;
   font-size: 15px;
   line-height: 1.5;
+  width: 100%;
 
   color: #5c5c5c;
 
   padding-left: 8px;
+  @media (min-width: 1440px) {
+    font-size: 16px;
+  }
 `;
 
 export const Items = styled.li`
@@ -50,20 +69,35 @@ export const Items = styled.li`
   :last-of-type {
     margin-bottom: 40px;
   }
+  @media (min-width: 1440px) {
+    :last-of-type {
+      margin-bottom: 64px;
+    }
+  }
 `;
 
 export const PriceTitle = styled.h3`
   font-weight: 700;
   font-size: 30px;
   line-height: 1.3;
+  margin-right: auto;
+  margin-left: auto;
 
   color: #0f0f0f;
 
   margin-bottom: 12px;
+  @media (min-width: 1440px) {
+    font-size: 50px;
+  }
 `;
 
 export const SignWrapper = styled.div`
   display: inline-block;
   vertical-align: top;
   font-size: 16px;
+  @media (min-width: 1440px) {
+    font-size: 26px;
+  }
 `;
+
+export const List = styled.ul``;

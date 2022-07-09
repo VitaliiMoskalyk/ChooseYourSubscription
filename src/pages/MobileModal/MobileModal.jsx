@@ -86,10 +86,10 @@ const MobileModal = ({ onClose }) => {
 
       <ButtonWrap>
         <ButtonWrapper>
-          <Button blue>Login</Button>
+          <Button>Login</Button>
         </ButtonWrapper>
         <ButtonWrapper>
-          <Button blue>Sign up</Button>
+          <Button>Sign up</Button>
         </ButtonWrapper>
       </ButtonWrap>
 

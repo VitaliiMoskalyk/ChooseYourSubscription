@@ -1,24 +1,14 @@
-import { ButtonWhite, ButtonBlue, ButtonBlack } from './Button.styled';
+import { Button1, Button2 } from './Button.styled';
 
-const Button = ({ children, onClick, white, blue, black }) => {
-  return (
-    <>
-      {white && (
-        <ButtonWhite type="button" onClick={onClick}>
-          {children}
-        </ButtonWhite>
-      )}
-      {blue && (
-        <ButtonBlue type="button" onClick={onClick}>
-          {children}
-        </ButtonBlue>
-      )}
-      {black && (
-        <ButtonBlack type="button" onClick={onClick}>
-          {children}
-        </ButtonBlack>
-      )}
-    </>
+const Button = ({ children, onClick, primary = false, invert }) => {
+  return invert ? (
+    <Button2 type="button" onClick={onClick}>
+      <b>{children}</b>
+    </Button2>
+  ) : (
+    <Button1 type="button" onClick={onClick} primary={primary}>
+      <b>{children}</b>
+    </Button1>
   );
 };
 

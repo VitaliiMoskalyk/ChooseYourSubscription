@@ -6,6 +6,7 @@ import {
   FAQSection,
 } from '../../views';
 import Wrapper from '../../components/Wrapper/Wrapper';
+import Request from 'components/faq_Request/Request';
 
 const MainPage = () => {
   return (
@@ -14,6 +15,7 @@ const MainPage = () => {
       <SubscriptionSection />
       <WorksSection />
       <AboutSection />
+      <Request />
       <FAQSection />
     </Wrapper>
   );

@@ -8,6 +8,7 @@ import {
   Items,
   PriceTitle,
   SignWrapper,
+  List,
 } from './TarifBlock.styled';
 
 const TarifBlock = ({ title, list, price }) => {
@@ -15,7 +16,7 @@ const TarifBlock = ({ title, list, price }) => {
     <Wrapper>
       <BlockTitle>{title}</BlockTitle>
       <Hr />
-      <ul>
+      <List>
         {list.map(item => (
           <Items key={item + Date}>
             <Svg icon="icon-Done" width="24" height="24" />
@@ -23,14 +24,14 @@ const TarifBlock = ({ title, list, price }) => {
             <ItemWrapper>{item}</ItemWrapper>
           </Items>
         ))}
-      </ul>
+      </List>
 
       <PriceTitle>
         <SignWrapper>$</SignWrapper>
         {price}
       </PriceTitle>
 
-      <Button blue>Get started</Button>
+      <Button>Get started</Button>
     </Wrapper>
   );
 };
