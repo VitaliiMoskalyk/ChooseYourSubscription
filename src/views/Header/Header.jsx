@@ -21,7 +21,7 @@ const Header = ({ opener, svgStatus }) => {
 
   return (
     <Head>
-      <LogoTitle logo={MainLogo} />
+      <LogoTitle logo={MainLogo} title="DiscountsOnServices" />
 
       {onlyWidth > 1439 && (
         <>

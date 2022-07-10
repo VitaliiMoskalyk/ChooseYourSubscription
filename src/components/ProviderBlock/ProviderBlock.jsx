@@ -1,7 +1,6 @@
 import Button from 'components/Button/Button';
 import { useWindowWidth } from '@react-hook/window-size';
 import {
-  Img,
   Border,
   ContentBox,
   Title3,
@@ -10,13 +9,14 @@ import {
   ButtonWrapper,
   ButtonTitle,
 } from './ProviderBlock.styled';
+import Svg from 'components/Svg/Svg';
 
-const ProviderBlock = ({ imgSrc, title, subscr }) => {
+const ProviderBlock = ({ icon, title, subscr, background }) => {
   const onlyWidth = useWindowWidth();
   return (
     <Border>
-      <ImgWrapper>
-        <Img src={imgSrc} alt="provider" width="100%" />
+      <ImgWrapper background={background}>
+        <Svg icon={icon} width="100%" height="100%" />
       </ImgWrapper>
 
       <ContentBox>

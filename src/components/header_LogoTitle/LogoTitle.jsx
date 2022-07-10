@@ -1,13 +1,10 @@
-import { useWindowWidth } from '@react-hook/window-size';
-import { LogoWrapper, Title } from './LogoTitle.styled';
+import { LogoWrapper, Title, Img } from './LogoTitle.styled';
 
-const LogoTitle = ({ logo }) => {
-  const onlyWidth = useWindowWidth();
-
+const LogoTitle = ({ logo, title }) => {
   return (
     <LogoWrapper>
-      <img src={logo} alt="MainLogo" width={onlyWidth < 1440 ? '32' : '55'} />
-      {onlyWidth > 767 && <Title>DiscountsOnServices</Title>}
+      <Img src={logo} alt="MainLogo" />
+      <Title>{title}</Title>
     </LogoWrapper>
   );
 };

@@ -5,8 +5,7 @@ export const Button1 = styled.button`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 16px 4px;
-  gap: 10px;
+  padding: 13px 4px;
   overflow: hidden;
   white-space: nowrap;
 
@@ -20,9 +19,13 @@ export const Button1 = styled.button`
   border: none;
 
   transition: background-color 0.5s;
+  @media (min-width: ${props => props.theme.width.desktop}) {
+    padding: 16px 4px;
+  }
 
   :hover {
     background-color: ${props => props.theme.color.white};
+    border-radius: 16px;
     outline: 1px solid
       ${props =>
         props.primary ? props.theme.color.black1 : props.theme.color.blue};
@@ -42,7 +45,7 @@ export const Button2 = styled(Button1)`
 
   :hover {
     background-color: ${props => props.theme.color.blue};
-    outline: 1px solid ${props => props.theme.color.white};
+    outline: 1px solid ${props => props.theme.color.white} 16px;
     color: ${props => props.theme.color.white};
   }
   :active,

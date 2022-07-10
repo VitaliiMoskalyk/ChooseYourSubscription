@@ -21,12 +21,6 @@ export const Border = styled.div`
   }
 `;
 
-export const Img = styled.img`
-  border-radius: 24px;
-  height: 100%;
-  overflow: hidden;
-`;
-
 export const ContentBox = styled.div`
   padding: 32px 20px;
   @media (min-width: 767px) {
@@ -63,6 +57,20 @@ export const Paragr = styled.p`
 
 export const ImgWrapper = styled.div`
   width: 100%;
+  border-radius: 24px;
+  height: 100%;
+  overflow: hidden;
+  padding: 32px;
+  background-color: ${props => props.background};
+
+  @media (min-width: 767px) {
+    max-width: 344px;
+    padding: 40px 18px;
+  }
+  @media (min-width: 1440px) {
+    max-width: 588px;
+    padding: 80px;
+  }
 `;
 
 export const ButtonWrapper = styled.div`

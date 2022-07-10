@@ -1,6 +1,3 @@
-import NetflixPic from '../../images/Netflix.jpg';
-import SpotifyPic from '../../images/Spotify.jpg';
-import YouTubePic from '../../images/YouTube.jpg';
 import ProviderBlock from 'components/ProviderBlock/ProviderBlock';
 import { Title2 } from './SubscriptionSection.styled';
 
@@ -11,7 +8,8 @@ const SubscriptionSection = () => {
       <ul>
         <li>
           <ProviderBlock
-            imgSrc={NetflixPic}
+            icon="icon-netflix"
+            background="#000000"
             title="Netflix subscription rates"
             subscr="The constant contributes to the task of the same and thus the
               intended features and the set relation to the check and set also."
@@ -19,14 +17,16 @@ const SubscriptionSection = () => {
         </li>
         <li>
           <ProviderBlock
-            imgSrc={SpotifyPic}
+            icon="icon-spotify-logo"
+            background="#1ED760"
             title="Spotify Premium"
             subscr="The constant contributes to the task of the same and thus the intended features and the set relation to the check and set also."
           />
         </li>
         <li>
           <ProviderBlock
-            imgSrc={YouTubePic}
+            icon="icon-youtube-logo"
+            background="#E1DCEB"
             title="Spotify Premium"
             subscr="The constant contributes to the task of the same and thus the intended features and the set relation to the check and set also."
           />

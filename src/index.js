@@ -15,6 +15,11 @@ const theme = {
     background: '#ECF3FB',
     white: '#FFFFFF',
   },
+  width: {
+    phone: '375px',
+    tablet: '768px',
+    desktop: '1440px',
+  },
 };
 ReactDOM.render(
   <React.StrictMode>
