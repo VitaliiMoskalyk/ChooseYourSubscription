@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 
 export const FooterStl = styled.footer`
+  display: flex;
+  flex-wrap: wrap;
   color: #ffffff;
 
   margin-left: auto;
@@ -14,11 +16,11 @@ export const FooterStl = styled.footer`
     flex-wrap: wrap;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 42px 32px 0 32px;
+    padding: 42px 32px 12px 32px;
     max-width: 768px;
   }
   @media (min-width: 1440px) {
-    padding: 0 120px;
+    padding: 40px 120px 12px 120px;
     max-width: 1440px;
   }
 `;
@@ -28,9 +30,12 @@ export const Span1 = styled.span`
   justify-content: start;
   flex-wrap: wrap;
   align-items: center;
+  margin-bottom: 40px;
+
   @media (min-width: 768px) {
     display: flex;
     width: 190px;
+    margin-bottom: 0;
   }
 `;
 
@@ -39,23 +44,16 @@ export const Title2 = styled.h2`
   line-height: 1.5;
   padding-left: 12px;
   @media (min-width: 768px) {
+    display: none;
+  }
+  @media (min-width: 1440px) {
+    display: block;
     font-size: 12px;
   }
 `;
 
 export const Paragh = styled.p`
   margin-top: 12px;
-`;
-
-export const Navigate = styled.nav`
-  display: flex;
-  flex-direction: row;
-
-  margin-top: 40px;
-
-  @media (min-width: 768px) {
-    margin-top: 0;
-  }
 `;
 
 export const Title4 = styled.h4`
@@ -92,14 +90,24 @@ export const Lang = styled.a`
 
 export const Span3 = styled.div`
   text-align: center;
-
+  border-top: 1px solid rgba(247, 247, 247, 0.5);
   font-size: 15px;
   line-height: 1.3;
   letter-spacing: 0.01em;
   color: #f7f7f7;
   opacity: 0.5;
+  padding-top: 16px;
+  width: 100%;
   @media (min-width: 768px) {
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
     width: 100vw;
+  }
+  @media (min-width: 1440px) {
+    border: none;
+    font-size: 16px;
+    line-height: 1.5;
   }
 `;
 
@@ -120,8 +128,10 @@ export const SiteNavigationWrapper = styled.div`
 
 export const SocialWrapper = styled.div`
   display: flex;
+  width: 100%;
   justify-content: space-between;
   @media (min-width: 768px) {
+    width: fit-content;
     flex-direction: column;
     align-items: flex-end;
   }

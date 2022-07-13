@@ -40,7 +40,7 @@ export const Title4 = styled.h4`
   @media (min-width: 767px) {
     max-width: 356px;
   }
-  @media (min-width: 1140px) {
+  @media (min-width: 1440px) {
     max-width: 704px;
   }
 `;

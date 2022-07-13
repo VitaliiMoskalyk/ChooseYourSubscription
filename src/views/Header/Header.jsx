@@ -1,5 +1,5 @@
 import Svg from 'components/Svg/Svg';
-import MainLogo from '../../images/mainLogo.png';
+import Logo from '../../images/Logo.svg';
 import {
   Head,
   SocialMediaWrapper,
@@ -21,7 +21,7 @@ const Header = ({ opener, svgStatus }) => {
 
   return (
     <Head>
-      <LogoTitle logo={MainLogo} title="DiscountsOnServices" />
+      <LogoTitle logo={Logo} title="DiscountsOnServices" />
 
       {onlyWidth > 1439 && (
         <>
