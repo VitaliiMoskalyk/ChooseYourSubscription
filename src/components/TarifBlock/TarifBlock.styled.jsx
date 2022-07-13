@@ -8,11 +8,12 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  /* align-items: center; */
+  height: 382px;
   padding: 32px 16px;
 
   margin-bottom: 16px;
   @media (min-width: 768px) {
+    height: 412px;
     width: 224px;
     margin-right: 16px;
     :last-of-type {
@@ -21,6 +22,7 @@ export const Wrapper = styled.div`
     margin-bottom: 0px;
   }
   @media (min-width: 1440px) {
+    height: 532px;
     width: 389px;
     padding: 60px 40px;
   }

@@ -26,9 +26,9 @@ const NetflixPage = () => {
       </SwitchWrapper>
 
       <TarifWrapper>
-        <TarifBlock title="Basic" list={netflixItems} price="45" />
+        <TarifBlock title="Basic" list={netflixItems} price="45" primary />
         <TarifBlock title="Standart" list={netflixItems} price="60" />
-        <TarifBlock title="Premium" list={netflixItems} price="80" />
+        <TarifBlock title="Premium" list={netflixItems} price="80" primary />
       </TarifWrapper>
 
       <Inviting />

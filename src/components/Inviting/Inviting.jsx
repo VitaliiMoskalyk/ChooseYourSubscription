@@ -1,5 +1,4 @@
 import Svg from 'components/Svg/Svg';
-
 import {
   ClickWrap,
   CopyButton,
@@ -8,6 +7,7 @@ import {
   Parag,
   Title,
   Link,
+  B,
 } from './Inviting.styled';
 import copy from 'copy-to-clipboard';
 
@@ -29,14 +29,13 @@ const Inviting = () => {
           onClick={() =>
             copy('Discounts On Services', {
               debug: true,
-              message: 'Press #{key} to copy',
             })
           }
         >
           <Link>
-            <b>Discounts On Services</b>
+            <B>Discounts On Services</B>
+            <Svg width="18.42" height="18.42" icon="icon-Copy" />
           </Link>
-          <Svg width="18.42" height="18.42" icon="icon-Copy" />
         </CopyButton>
       </ClickWrap>
     </InviteBlock>

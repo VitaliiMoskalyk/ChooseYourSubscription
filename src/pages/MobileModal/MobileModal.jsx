@@ -72,8 +72,10 @@ const MobileModal = ({ onClose }) => {
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="#">
-              <NavTitle>YouTube</NavTitle>
+            <Link>
+              <NavLink to="/youtube" onClick={onClose}>
+                <NavTitle>YouTube</NavTitle>
+              </NavLink>
             </Link>
           </NavItem>
           <NavItem>

@@ -6,7 +6,7 @@ import {
   FAQSection,
 } from '../../views';
 import Wrapper from '../../components/Wrapper/Wrapper';
-import Request from 'components/faq_Request/Request';
+import Request from 'components/Request/Request';
 
 const MainPage = () => {
   return (

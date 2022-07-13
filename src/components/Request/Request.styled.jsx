@@ -32,7 +32,7 @@ export const Article = styled.p`
 
 export const BtnTxt = styled.b`
   font-size: 17px;
-  line-height: 130%;
+  line-height: 1.3;
 `;
 
 export const ReqButtonWrapper = styled.div`

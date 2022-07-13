@@ -7,8 +7,12 @@ export const SocialLinks = styled.ul`
 `;
 
 export const Link = styled.a`
-  :hover,
-  :focus {
-    fill: #1749b3;
+  fill: ${props => props.fill};
+  :hover {
+    fill: ${props =>
+      props.inverse ? 'rgba(255, 255, 255, 0.8)' : props.theme.color.blue};
+  }
+  :active {
+    fill: ${props => (props.inverse ? '#F7F7F7' : '#4b84fd')};
   }
 `;

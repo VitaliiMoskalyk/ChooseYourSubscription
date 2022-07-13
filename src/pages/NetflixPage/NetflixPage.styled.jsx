@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 
 export const TarifWrapper = styled.div`
   display: flex;
+  justify-content: center;
   flex-direction: column;
   @media (min-width: 768px) {
     flex-direction: row;

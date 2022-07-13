@@ -1,22 +1,24 @@
 import styled from '@emotion/styled';
 
 export const InviteBlock = styled.div`
-  background-color: #1749b3;
+  background-color: ${props => props.theme.color.blue};
   box-shadow: 0px 2.328px 13.968px rgba(213, 216, 221, 0.2);
   border-radius: 18.624px;
 
   padding: 32px 20px 20px 20px;
   margin-top: 16px;
+  width: 100%;
 
-  color: #ffffff;
-  @media (min-width: 768px) {
+  overflow: hidden;
+  color: ${props => props.theme.color.white};
+  @media (min-width: ${props => props.theme.width.tablet}) {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 32px;
   }
 
-  @media (min-width: 1440px) {
+  @media (min-width: ${props => props.theme.width.desktop}) {
     padding: 40px 80px;
   }
 `;
@@ -31,10 +33,12 @@ export const Parag = styled.p`
   font-weight: 400;
   font-size: 17px;
   line-height: 1.5;
-  color: #fff;
+  color: ${props => props.theme.color.white};
+
+  width: 100%;
 
   margin-top: 16px;
-  @media (min-width: 768px) {
+  @media (min-width: ${props => props.theme.width.tablet}) {
     font-size: 16px;
   }
 `;
@@ -49,15 +53,15 @@ export const ClickWrap = styled.div`
   font-size: 18px;
   line-height: 1.4;
 
-  color: #171717;
+  color: ${props => props.theme.color.black2};
   text-align: center;
-  @media (min-width: 768px) {
+  @media (min-width: ${props => props.theme.width.tablet}) {
     margin-top: 0;
     padding: 20px 24px;
     width: 336px;
     height: 104px;
   }
-  @media (min-width: 1440px) {
+  @media (min-width: ${props => props.theme.width.desktop}) {
     margin-top: 0;
     padding: 28px 72px;
     width: 445px;
@@ -66,15 +70,16 @@ export const ClickWrap = styled.div`
 `;
 
 export const Link = styled.span`
-  display: inline-block;
+  display: flex;
+  align-items: flex-end;
   font-size: 13.8125px;
   line-height: 1.5;
   text-decoration-line: underline;
   text-transform: uppercase;
 
-  color: #1749b3;
+  color: ${props => props.theme.color.blue};
   text-align: center;
-  padding-right: 14px;
+
   margin-top: 12px;
 `;
 
@@ -87,7 +92,11 @@ export const CopyButton = styled.button`
 
 export const InviteBlockWrapper = styled.div`
   width: 275px;
-  @media (min-width: 1440px) {
+  @media (min-width: ${props => props.theme.width.desktop}) {
     width: 508px;
   }
+`;
+
+export const B = styled.b`
+  padding-right: 14px;
 `;

@@ -5,6 +5,7 @@ import { Footer, Header } from 'views';
 import { useState } from 'react';
 import MobileModal from 'pages/MobileModal/MobileModal';
 import { useWindowWidth } from '@react-hook/window-size';
+import YouTubePage from 'pages/YouTubePage/YouTubePage';
 
 export const App = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,7 @@ export const App = () => {
           <Routes>
             <Route path="/" element={<MainPage />} />
             <Route path="netflix" element={<NetflixPage />} />
+            <Route path="youtube" element={<YouTubePage />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>
           <Footer />

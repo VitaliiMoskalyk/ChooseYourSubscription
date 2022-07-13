@@ -47,7 +47,7 @@ const Footer = () => {
         </Navigate>
         <SocialWrapper>
           <SocialMediaWrapper>
-            <SocialMedia fill="#fff" width="32" />
+            <SocialMedia fill="#fff" width="32" inverse />
           </SocialMediaWrapper>
           <div>
             <LanguageSwitcher fill="#FFFFFF" />

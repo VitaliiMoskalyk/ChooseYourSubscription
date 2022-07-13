@@ -48,7 +48,7 @@ export const Title4 = styled.h4`
 export const WrapBtn = styled.div`
   margin-right: auto;
   margin-left: auto;
-  width: 243px;
+  max-width: 243px;
   height: 48px;
   margin-top: 28px;
   @media (min-width: 1440px) {

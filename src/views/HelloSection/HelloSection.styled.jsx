@@ -64,7 +64,7 @@ export const Section = styled.section`
 
 export const ButtonWrapper = styled.div`
   height: 48px;
-  width: 287px;
+  width: 100%;
   @media (min-width: 768px) {
     height: 48px;
     width: 207px;

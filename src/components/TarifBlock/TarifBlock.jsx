@@ -11,7 +11,7 @@ import {
   List,
 } from './TarifBlock.styled';
 
-const TarifBlock = ({ title, list, price }) => {
+const TarifBlock = ({ title, list, price, primary }) => {
   return (
     <Wrapper>
       <BlockTitle>{title}</BlockTitle>
@@ -31,7 +31,7 @@ const TarifBlock = ({ title, list, price }) => {
         {price}
       </PriceTitle>
 
-      <Button>Get started</Button>
+      <Button primary={primary}>Get started</Button>
     </Wrapper>
   );
 };
