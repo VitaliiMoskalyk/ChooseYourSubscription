@@ -24,7 +24,7 @@ export const Wrapper = styled.div`
   @media (min-width: 1440px) {
     height: 532px;
     width: 389px;
-    padding: 60px 40px;
+    padding: 60px 40px 40px 40px;
   }
 `;
 
@@ -32,6 +32,9 @@ export const Hr = styled.hr`
   width: 100%;
   margin: 0 0 21px 0;
   border: 1px solid #dbdbdb;
+  @media (min-width: 1440px) {
+    margin: 0 0 36px 0;
+  }
 `;
 
 export const BlockTitle = styled.h3`
@@ -47,6 +50,7 @@ export const BlockTitle = styled.h3`
   margin-bottom: 20px;
   @media (min-width: 1440px) {
     font-size: 32px;
+    margin-bottom: 32px;
   }
 `;
 
@@ -68,9 +72,9 @@ export const Items = styled.li`
   display: flex;
   margin-bottom: 17px;
 
-  :last-of-type {
+  /* :last-of-type {
     margin-bottom: 40px;
-  }
+  } */
   @media (min-width: 1440px) {
     :last-of-type {
       margin-bottom: 64px;
@@ -102,4 +106,12 @@ export const SignWrapper = styled.div`
   }
 `;
 
-export const List = styled.ul``;
+export const List = styled.ul`
+  min-height: 143px;
+  @media (min-width: 768px) {
+    min-height: 173px;
+  }
+  @media (min-width: 1440px) {
+    min-height: 184px;
+  }
+`;
