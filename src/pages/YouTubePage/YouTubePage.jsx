@@ -1,11 +1,7 @@
 import Inviting from 'components/Inviting/Inviting';
 import TarifBlock from 'components/TarifBlock/TarifBlock';
 import Wrapper from 'components/Wrapper/Wrapper';
-import {
-  MainParag,
-  MainTitle,
-  TarifWrapper,
-} from 'pages/NetflixPage/NetflixPage.styled';
+import { MainParag, MainTitle, TarifWrapper } from 'pages/Pages.styled';
 import { FAQSection } from 'views';
 
 const YouTubePage = () => {

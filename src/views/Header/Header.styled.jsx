@@ -35,6 +35,7 @@ export const SocialMediaWrapper = styled.div`
 
 export const SiteNavigationWrapper = styled.div`
   margin-left: 44px;
+  max-height: 100%;
   width: 419px;
 `;
 
@@ -45,7 +46,7 @@ export const SiteNavTitle = styled.span`
 export const SubscriptionsWrapper = styled.div`
   display: flex;
   align-items: center;
-  flex-wrap: nowrap;
+  flex-direction: row;
   margin-left: 116px;
 `;
 

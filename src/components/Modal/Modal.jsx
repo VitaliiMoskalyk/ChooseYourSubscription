@@ -1,7 +1,11 @@
+import { useWindowWidth } from '@react-hook/window-size';
+import Svg from 'components/Svg/Svg';
 import { useEffect } from 'react';
-import { ModalContent, ModalWrapper } from './Modal.styled';
+import { ModalContent, ModalWrapper, SvgWrapper } from './Modal.styled';
 
-const Modal = ({ onClose, children }) => {
+const Modal = ({ isOpen, onClose, children }) => {
+  const onlyWidth = useWindowWidth();
+
   useEffect(() => {
     window.addEventListener('keydown', close);
     document.getElementsByTagName('body')[0].style.overflow = 'hidden';
@@ -16,9 +20,18 @@ const Modal = ({ onClose, children }) => {
   };
 
   return (
-    <ModalWrapper onClick={close}>
-      <ModalContent>{children}</ModalContent>
-    </ModalWrapper>
+    isOpen && (
+      <ModalWrapper onClick={close}>
+        <ModalContent>
+          {onlyWidth > 768 && (
+            <SvgWrapper>
+              <Svg width="28" height="28" icon="icon-Close" onClick={onClose} />
+            </SvgWrapper>
+          )}
+          {children}
+        </ModalContent>
+      </ModalWrapper>
+    )
   );
 };
 

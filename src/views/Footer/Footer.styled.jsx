@@ -62,15 +62,15 @@ export const Title4 = styled.h4`
   margin-bottom: 14px;
 `;
 
-export const Links = styled.ul`
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  line-height: 1.5;
+// export const Links = styled.ul`
+//   display: flex;
+//   flex-direction: column;
+//   font-size: 16px;
+//   line-height: 1.5;
 
-  margin-right: 28px;
-  margin-bottom: 42.67px;
-`;
+//   margin-right: 28px;
+//   margin-bottom: 42.67px;
+// `;
 
 export const SocialMediaWrapper = styled.div`
   width: 80px;
@@ -111,19 +111,22 @@ export const Span3 = styled.div`
   }
 `;
 
-export const SocialItem = styled.li`
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 6px 0;
-`;
+// export const SocialItem = styled.li`
+//   font-size: 16px;
+//   line-height: 1.5;
+//   margin: 6px 0;
+// `;
 
 export const Span4 = styled.div`
   background-color: #1749b3;
 `;
 
-export const SiteNavigationWrapper = styled.div`
-  width: 65px;
-  height: 96px;
+export const NavigationWrapper = styled.div`
+  margin-right: 8px;
+  margin-bottom: 42.67px;
+  ul {
+    flex-direction: column;
+  }
 `;
 
 export const SocialWrapper = styled.div`

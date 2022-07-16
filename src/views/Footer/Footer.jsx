@@ -5,17 +5,16 @@ import {
   Title2,
   Paragh,
   Title4,
-  Links,
-  SiteNavigationWrapper,
+  NavigationWrapper,
   SocialMediaWrapper,
   Span1,
   Span3,
   Span4,
-  SocialItem,
   SocialWrapper,
 } from './Footer.styled';
 import SiteNavigation from 'components/SiteNavigation/SiteNavigation';
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
+import PageNavigation from 'components/PageNavigation/PageNavigation';
 
 const Footer = () => {
   return (
@@ -26,21 +25,16 @@ const Footer = () => {
           <Title2>DiscountsOnServices</Title2>
           <Paragh>It's simple, fast and economical</Paragh>
         </Span1>
-        <span>
+        <NavigationWrapper>
           <Title4>Subscriptions</Title4>
-          <Links>
-            <SocialItem>Netflix</SocialItem>
-            <SocialItem>YouTube Premium</SocialItem>
-            <SocialItem>Spotify</SocialItem>
-          </Links>
-        </span>
+          <PageNavigation />
+        </NavigationWrapper>
 
-        <span>
+        <NavigationWrapper>
           <Title4>Site navigation</Title4>
-          <SiteNavigationWrapper>
-            <SiteNavigation />
-          </SiteNavigationWrapper>
-        </span>
+          <SiteNavigation />
+        </NavigationWrapper>
+
         <SocialWrapper>
           <SocialMediaWrapper>
             <SocialMedia fill="#fff" width="32" inverse />

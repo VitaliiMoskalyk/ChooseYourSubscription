@@ -27,7 +27,7 @@ const SubscriptionSection = () => {
           <ProviderBlock
             icon="icon-youtube-logo"
             background="#E1DCEB"
-            title="Spotify Premium"
+            title="YouTube Premium "
             subscr="The constant contributes to the task of the same and thus the intended features and the set relation to the check and set also."
           />
         </li>

@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { HashLink } from 'react-router-hash-link';
 
 export const PageNav = styled.div`
   box-shadow: 0px 12px 28px rgba(177, 177, 177, 0.2);
@@ -26,7 +27,7 @@ export const NavItem = styled.li`
   border-radius: 8px;
 `;
 
-export const Link = styled.div`
+export const Link = styled(HashLink)`
   display: flex;
   align-items: center;
   padding: 17px 24px;

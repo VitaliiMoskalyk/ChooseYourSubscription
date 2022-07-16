@@ -108,6 +108,7 @@ export const SignWrapper = styled.div`
 
 export const List = styled.ul`
   min-height: 143px;
+  overflow: hidden;
   @media (min-width: 768px) {
     min-height: 173px;
   }

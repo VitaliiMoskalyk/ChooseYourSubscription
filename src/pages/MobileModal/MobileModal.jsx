@@ -1,6 +1,4 @@
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
-import Modal from 'components/Modal/Modal';
-import { NavLink } from 'react-router-dom';
 
 const { default: Button } = require('components/Button/Button');
 const { default: SocialMedia } = require('components/SocialMedia/SocialMedia');
@@ -19,73 +17,54 @@ const {
 
 const MobileModal = ({ onClose }) => {
   return (
-    <Modal onClose={onClose}>
+    <>
       <PageNav>
         <ul>
           <NavItem>
-            <NavLink to="/" onClick={onClose}>
-              <Link>
-                <Svg icon="icon-Home" width="20" height="18" />
-                <NavTitle>Home</NavTitle>
-              </Link>
-            </NavLink>
+            <Link smooth to="/" onClick={onClose}>
+              <Svg icon="icon-Home" width="20" height="18" />
+              <NavTitle>Home</NavTitle>
+            </Link>
           </NavItem>
           <NavItem>
-            <NavLink
-              to={{ pathname: '/', hash: '#AboutSection' }}
-              onClick={onClose}
-            >
-              <Link>
-                <Svg icon="icon-About" width="20" height="18" />
-                <NavTitle>About</NavTitle>
-              </Link>
-            </NavLink>
+            <Link smooth to="/#AboutSection" onClick={onClose}>
+              <Svg icon="icon-About" width="20" height="18" />
+              <NavTitle>About</NavTitle>
+            </Link>
           </NavItem>
           <NavItem>
-            <NavLink to={{ pathname: '/', hash: '#FAQ' }} onClick={onClose}>
-              <Link>
-                <Svg icon="icon-FAQ" width="20" height="18" />
-                <NavTitle>FAQ</NavTitle>
-              </Link>
-            </NavLink>
+            <Link smooth to="/#FAQ" onClick={onClose}>
+              <Svg icon="icon-FAQ" width="20" height="18" />
+              <NavTitle>FAQ</NavTitle>
+            </Link>
           </NavItem>
           <NavItem>
-            <NavLink
-              to={{ pathname: '/', hash: '#AboutSection' }}
-              onClick={onClose}
-            >
-              <Link href="#Support" onClick={onClose}>
-                <Svg icon="icon-Support" width="20" height="18" />
-                <NavTitle>Support</NavTitle>
-              </Link>
-            </NavLink>
+            <Link smooth to="/#FAQ" onClick={onClose}>
+              <Svg icon="icon-Support" width="20" height="18" />
+              <NavTitle>Support</NavTitle>
+            </Link>
           </NavItem>
         </ul>
       </PageNav>
       <PageNav>
         <ul>
           <NavItem>
-            <Link>
-              <NavLink to="/netflix" onClick={onClose}>
-                <NavTitle>Netflix</NavTitle>
-              </NavLink>
+            <Link to="/netflix" onClick={onClose}>
+              <NavTitle>Netflix</NavTitle>
             </Link>
           </NavItem>
           <NavItem>
-            <Link>
-              <NavLink to="/youtube" onClick={onClose}>
-                <NavTitle>YouTube</NavTitle>
-              </NavLink>
+            <Link to="/youtube" onClick={onClose}>
+              <NavTitle>YouTube</NavTitle>
             </Link>
           </NavItem>
           <NavItem>
-            <Link href="#">
+            <Link to="/spotify" onClick={onClose}>
               <NavTitle>Spotify</NavTitle>
             </Link>
           </NavItem>
         </ul>
       </PageNav>
-
       <ButtonWrap>
         <ButtonWrapper>
           <Button>Login</Button>
@@ -94,7 +73,6 @@ const MobileModal = ({ onClose }) => {
           <Button>Sign up</Button>
         </ButtonWrapper>
       </ButtonWrap>
-
       <SocialMediaWrapper>
         <SocialWrapper>
           <SocialMedia fill="#333333" width="32" />
@@ -103,7 +81,7 @@ const MobileModal = ({ onClose }) => {
           <LanguageSwitcher fill="#333333" />
         </div>
       </SocialMediaWrapper>
-    </Modal>
+    </>
   );
 };
 
