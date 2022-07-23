@@ -28,6 +28,7 @@ export const LogInButton = styled.button`
   }
   :active {
     background-color: #4b84fd;
-    color: transparent;
+    border: none;
+    color: #fff;
   }
 `;

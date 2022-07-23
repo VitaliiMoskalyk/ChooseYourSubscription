@@ -2,7 +2,7 @@ import Inviting from 'components/Inviting/Inviting';
 import SwitchButton from 'components/SwitchButton/SwitchButton';
 import TarifBlock from 'components/TarifBlock/TarifBlock';
 import Wrapper from 'components/Wrapper/Wrapper';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 import { FAQSection } from 'views';
 import {
   TarifWrapper,
@@ -17,9 +17,9 @@ const NetflixPage = () => {
     'Play anywhere - even offline',
     'On-demand playback',
   ];
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, []);
   // useEffect(() => {
   //   console.dir(window.scrollTo({ top: 0, left: 0, behavior: 'smooth' }));
   //   window.scrollTo({ top: '10000px', left: 0, behavior: 'smooth' });

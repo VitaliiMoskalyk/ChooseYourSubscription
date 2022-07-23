@@ -15,18 +15,16 @@ import LogoTitle from 'components/header_LogoTitle/LogoTitle';
 import SiteNavigation from 'components/SiteNavigation/SiteNavigation';
 import LogInBtn from 'components/header_LogInBtn/LogInBtn';
 import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
-import { useState } from 'react';
-import MobileModal from 'pages/MobileModal/MobileModal';
-import Modal from 'components/Modal/Modal';
+
+import { useSelector, useDispatch } from 'react-redux';
+import { toggleMenuModal } from 'redux/slices/modalSlace';
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
   const onlyWidth = useWindowWidth();
 
-  const handleClick = () => {
-    setIsOpen(!isOpen);
-  };
-  console.log(isOpen);
+  const dispatch = useDispatch();
+  const menuModalIsOpen = useSelector(state => state.modals.menuModal);
+
   return (
     <>
       <Head>
@@ -58,8 +56,8 @@ const Header = () => {
         )}
 
         {onlyWidth < 1440 && (
-          <div onClick={handleClick}>
-            {isOpen ? (
+          <div onClick={() => dispatch(toggleMenuModal())}>
+            {menuModalIsOpen ? (
               <Svg
                 width="28"
                 height="28"
@@ -72,11 +70,6 @@ const Header = () => {
           </div>
         )}
       </Head>
-      {isOpen && onlyWidth < 1440 && (
-        <Modal isOpen onClose={handleClick}>
-          <MobileModal onClose={handleClick} />
-        </Modal>
-      )}
     </>
   );
 };
