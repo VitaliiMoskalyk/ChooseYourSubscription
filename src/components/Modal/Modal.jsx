@@ -3,7 +3,7 @@ import Svg from 'components/Svg/Svg';
 import { useEffect } from 'react';
 import { ModalContent, ModalWrapper, SvgWrapper } from './Modal.styled';
 
-const Modal = ({ children, onClose, isOpen }) => {
+const Modal = ({ children, onClose, isOpen, color }) => {
   const onlyWidth = useWindowWidth();
 
   useEffect(() => {
@@ -21,8 +21,8 @@ const Modal = ({ children, onClose, isOpen }) => {
 
   return (
     isOpen && (
-      <ModalWrapper onClick={close}>
-        <ModalContent>
+      <ModalWrapper onClick={close} color={color}>
+        <ModalContent color={color}>
           {onlyWidth > 768 && (
             <SvgWrapper>
               <Svg width="28" height="28" icon="icon-Close" onClick={onClose} />

@@ -26,6 +26,7 @@ const Modals = () => {
         <Modal
           isOpen={authModalIsOpen}
           onClose={() => dispatch(toggleAuthModal())}
+          color="#fff"
         >
           <LogInModal />
         </Modal>

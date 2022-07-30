@@ -7,7 +7,8 @@ export const ModalWrapper = styled.div`
 
   width: 100%;
   min-height: 100vh;
-  background-color: ${props => props.theme.color.background};
+  background-color: ${props =>
+    props.color ? props.color : props.theme.color.background};
   overflow-y: auto;
   z-index: 2;
   @media (min-width: ${props => props.theme.width.tablet}) {
@@ -23,7 +24,8 @@ export const ModalContent = styled.div`
   max-width: 375px;
 
   padding: 24px;
-  background-color: ${props => props.theme.color.background};
+  background-color: ${props =>
+    props.color ? props.color : props.theme.color.background};
   margin-left: auto;
   margin-right: auto;
 
