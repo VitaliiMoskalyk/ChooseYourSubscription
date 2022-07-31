@@ -1,12 +1,6 @@
 // import Button from 'components/Button/Button';
 import LogInForm from 'components/LogInForm/LogInForm';
-import {
-  PageWrapper,
-  Title,
-  Paraghraph,
-  Link,
-  ForgotParag,
-} from './LogInModal.styled';
+import { PageWrapper, Title, Paraghraph, Link } from './LogInModal.styled';
 
 const LogInModal = () => {
   return (
