@@ -2,13 +2,24 @@ import { useWindowWidth } from '@react-hook/window-size';
 import Modal from 'components/Modal/Modal';
 import LogInModal from 'pages/LogInModal/LogInModal';
 import MobileModal from 'pages/MobileModal/MobileModal';
+import RegisterModal from 'pages/RegisterModal/RegisterModal';
 import { useDispatch, useSelector } from 'react-redux';
-import { toggleAuthModal, toggleMenuModal } from 'redux/slices/modalSlace';
+import {
+  toggleAuthModal,
+  toggleMenuModal,
+  toggleRegisterModal,
+  toggleSubscriptionModal,
+} from 'redux/slices/modalSlace';
 
 const Modals = () => {
   const onlyWidth = useWindowWidth();
   const menuModalIsOpen = useSelector(state => state.modals.menuModal);
   const authModalIsOpen = useSelector(state => state.modals.loginModal);
+  const registerModalIsOpen = useSelector(state => state.modals.registerModal);
+  const subscriptionModalIsOpen = useSelector(
+    state => state.modals.subscriptionModal
+  );
+
   const dispatch = useDispatch();
 
   return (
@@ -30,6 +41,24 @@ const Modals = () => {
         >
           <LogInModal />
         </Modal>
+      )}
+
+      {registerModalIsOpen && (
+        <Modal
+          isOpen={registerModalIsOpen}
+          onClose={() => dispatch(toggleRegisterModal())}
+          color="#fff"
+        >
+          <RegisterModal />
+        </Modal>
+      )}
+
+      {subscriptionModalIsOpen && (
+        <Modal
+          isOpen={subscriptionModalIsOpen}
+          onClose={() => dispatch(toggleSubscriptionModal())}
+          color="#fff"
+        ></Modal>
       )}
     </>
   );

@@ -52,4 +52,11 @@ export const SvgWrapper = styled.div`
   top: 40px;
   display: block;
   width: fit-content;
+  fill: #171717;
+  transition: fill 0.5s;
+  :focus,
+  :hover {
+    fill: #1749b3;
+    transform: scale(1.1);
+  }
 `;

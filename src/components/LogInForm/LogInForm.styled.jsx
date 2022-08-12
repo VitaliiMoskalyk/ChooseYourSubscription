@@ -35,14 +35,15 @@ export const InputWrapper = styled.div`
   position: relative;
   width: 100%;
   fill: #838099;
+  margin-bottom: 24px;
 
   :hover,
   :focus,
   :active {
     fill: #1749b3;
   }
-  :first-of-type {
-    margin-bottom: 24px;
+  :last-of-type {
+    margin-bottom: 0;
   }
 `;
 

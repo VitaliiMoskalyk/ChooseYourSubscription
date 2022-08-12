@@ -1,36 +1,28 @@
 import AuthBySocialMedia from 'components/AuthBySocialMedia/AuthBySocialMedia';
 import LogInForm from 'components/LogInForm/LogInForm';
-import {
-  PageWrapper,
-  Title,
-  Paraghraph,
-  Link,
-  Terms,
-  Blue,
-} from './LogInModal.styled';
-import { useDispatch } from 'react-redux';
-import { toggleRegisterModal } from 'redux/slices/modalSlace';
 
-const LogInModal = () => {
+import { PageWrapper, Paraghraph, Title, Link } from './RegisterModal.styled';
+import { useDispatch } from 'react-redux';
+import { toggleAuthModal } from 'redux/slices/modalSlace';
+
+const RegisterModal = () => {
   const dispatch = useDispatch();
   return (
     <PageWrapper>
-      <Title>Log in</Title>
+      <Title>Create an account</Title>
       <Paraghraph>
-        New user?
-        <Link onClick={() => dispatch(toggleRegisterModal())}>
-          Create an account
-        </Link>
+        Already have an account?
+        <Link onClick={() => dispatch(toggleAuthModal())}> Sign In</Link>
       </Paraghraph>
-      <LogInForm forgotPassword btnTitle="Log in" />
+      <LogInForm register btnTitle="Sign up" />
 
       <AuthBySocialMedia />
 
-      <Terms>
+      {/* <Terms>
         Protected by reCAPTCHA and subject to the Google
         <Blue> Privacy Policy</Blue> and <Blue>Terms of Service</Blue>.
-      </Terms>
+      </Terms> */}
     </PageWrapper>
   );
 };
-export default LogInModal;
+export default RegisterModal;

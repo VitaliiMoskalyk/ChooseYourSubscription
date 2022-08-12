@@ -1,5 +1,7 @@
 import Button from 'components/Button/Button';
 import Svg from 'components/Svg/Svg';
+import { useDispatch } from 'react-redux';
+import { toggleSubscriptionModal } from 'redux/slices/modalSlace';
 import {
   Wrapper,
   Hr,
@@ -12,6 +14,7 @@ import {
 } from './TarifBlock.styled';
 
 const TarifBlock = ({ title, list, price, primary }) => {
+  const dispatch = useDispatch();
   return (
     <Wrapper>
       <BlockTitle>{title}</BlockTitle>
@@ -31,7 +34,12 @@ const TarifBlock = ({ title, list, price, primary }) => {
         {price}
       </PriceTitle>
 
-      <Button primary={primary}>Get started</Button>
+      <Button
+        primary={primary}
+        onClick={() => dispatch(toggleSubscriptionModal())}
+      >
+        Get started
+      </Button>
     </Wrapper>
   );
 };

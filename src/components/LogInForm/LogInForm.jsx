@@ -13,20 +13,22 @@ import {
 } from './LogInForm.styled';
 import { useState } from 'react';
 
-const LogInForm = () => {
+const LogInForm = ({ register, forgotPassword, btnTitle }) => {
   const [isShowPass, setIsShowPass] = useState(false);
   const showPassword = () => {
     setIsShowPass(!isShowPass);
   };
   return (
     <Formik
-      initialValues={{ email: '', password: '' }}
+      autoComplete="off"
+      initialValues={{ email: '', password: '', name: '' }}
       validationSchema={Yup.object({
-        email: Yup.string()
-          .email(' ')
-
-          .required(' '),
+        email: Yup.string().email(' ').required(' '),
         password: Yup.string()
+          .min(6, 'Must be 6 characters or more')
+          .max(10, 'Must be 10 characters or less')
+          .required(' '),
+        name: Yup.string()
           .min(6, 'Must be 6 characters or more')
           .max(10, 'Must be 10 characters or less')
           .required(' '),
@@ -37,6 +39,19 @@ const LogInForm = () => {
     >
       {({ errors, touched }) => (
         <Wrapper>
+          {register && (
+            <InputWrapper>
+              <Label htmlFor="name">User name</Label>
+
+              <Input
+                error={errors.name}
+                id="name"
+                name="name"
+                type="text"
+                placeholder="Enter your name"
+              />
+            </InputWrapper>
+          )}
           <InputWrapper>
             <Label htmlFor="email">Email Address</Label>
             <SvgStyled>
@@ -75,10 +90,12 @@ const LogInForm = () => {
 
           {/* <ErrorMessage name="password" /> */}
           <SubmitWrapper>
-            <Submit type="submit">Log in</Submit>
-            <ForgotParag>
-              <b>Forgot password?</b>
-            </ForgotParag>
+            <Submit type="submit">{btnTitle}</Submit>
+            {forgotPassword && (
+              <ForgotParag>
+                <b>Forgot password?</b>
+              </ForgotParag>
+            )}
           </SubmitWrapper>
         </Wrapper>
       )}
