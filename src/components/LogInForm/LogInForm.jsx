@@ -1,91 +1,50 @@
 import { Formik } from 'formik';
-import * as Yup from 'yup';
-import Svg from 'components/Svg/Svg';
 import {
   Wrapper,
-  Input,
-  SvgStyled,
-  InputWrapper,
   Submit,
   SubmitWrapper,
-  Label,
   ForgotParag,
 } from './LogInForm.styled';
-import { useState } from 'react';
+import InputLabels from 'components/InputLabels';
 
-const LogInForm = ({ register, forgotPassword, btnTitle }) => {
-  const [isShowPass, setIsShowPass] = useState(false);
-  const showPassword = () => {
-    setIsShowPass(!isShowPass);
-  };
+const LogInForm = ({ validation, forgotPassword, btnTitle, onSubmit }) => {
   return (
     <Formik
       autoComplete="off"
-      initialValues={{ email: '', password: '', name: '' }}
-      validationSchema={Yup.object({
-        email: Yup.string().email(' ').required(' '),
-        password: Yup.string()
-          .min(6, 'Must be 6 characters or more')
-          .max(10, 'Must be 10 characters or less')
-          .required(' '),
-        name: Yup.string()
-          .min(6, 'Must be 6 characters or more')
-          .max(10, 'Must be 10 characters or less')
-          .required(' '),
-      })}
-      onSubmit={values => {
-        alert(JSON.stringify(values, null, 2));
-      }}
+      initialValues={validation.initialValues}
+      validationSchema={validation}
+      onSubmit={values => onSubmit(values)}
     >
       {({ errors, touched }) => (
         <Wrapper>
-          {register && (
-            <InputWrapper>
-              <Label htmlFor="name">User name</Label>
-
-              <Input
-                error={errors.name}
-                id="name"
-                name="name"
-                type="text"
-                placeholder="Enter your name"
-              />
-            </InputWrapper>
+          {validation.valid === 'register' && (
+            <>
+              <InputLabels.InputNameLabel error={errors.name} />
+              <InputLabels.InputEmailLabel error={errors.email} />
+              <InputLabels.InputPasswordLabel error={errors.password} />
+            </>
           )}
-          <InputWrapper>
-            <Label htmlFor="email">Email Address</Label>
-            <SvgStyled>
-              {touched.email && errors.email ? (
-                <Svg icon="icon-invalid" width="22" height="22" />
-              ) : (
-                <Svg icon="icon-Valid" width="22" height="22" />
-              )}
-            </SvgStyled>
-            <Input
-              error={errors.email}
-              id="email"
-              name="email"
-              type="email"
-              placeholder="name@gmail.com"
-            />
-          </InputWrapper>
-          <InputWrapper>
-            <Label htmlFor="password">Password</Label>
-            <SvgStyled onClick={showPassword}>
-              {isShowPass ? (
-                <Svg icon="icon-openEye" width="22" height="22" />
-              ) : (
-                <Svg icon="icon-closeEye" width="22" height="22" />
-              )}
-            </SvgStyled>
-            <Input
-              error={errors.password}
-              id="password"
-              name="password"
-              type={isShowPass ? 'text' : 'password'}
-              placeholder="********"
-            />
-          </InputWrapper>
+
+          {validation.valid === 'subscribe' && (
+            <>
+              <InputLabels.InputNameLabel error={errors.name} />
+              <InputLabels.InputEmailLabel error={errors.email} />
+              <InputLabels.InputPhoneLabel error={errors.phone} />
+            </>
+          )}
+
+          {validation.valid === 'login' && (
+            <>
+              <InputLabels.InputEmailLabel error={errors.email} />
+              <InputLabels.InputPasswordLabel error={errors.password} />
+            </>
+          )}
+
+          {validation.valid === 'code' && (
+            <>
+              <InputLabels.InputVerifyLabel error={errors.code} />
+            </>
+          )}
           {/* <ErrorMessage name="email" /> */}
 
           {/* <ErrorMessage name="password" /> */}

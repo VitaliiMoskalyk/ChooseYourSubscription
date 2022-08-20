@@ -3,6 +3,7 @@ import Modal from 'components/Modal/Modal';
 import LogInModal from 'pages/LogInModal/LogInModal';
 import MobileModal from 'pages/MobileModal/MobileModal';
 import RegisterModal from 'pages/RegisterModal/RegisterModal';
+import SubscribeModal from 'pages/SubscribeModal/SubscribeModal';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   toggleAuthModal,
@@ -58,7 +59,9 @@ const Modals = () => {
           isOpen={subscriptionModalIsOpen}
           onClose={() => dispatch(toggleSubscriptionModal())}
           color="#fff"
-        ></Modal>
+        >
+          <SubscribeModal />
+        </Modal>
       )}
     </>
   );

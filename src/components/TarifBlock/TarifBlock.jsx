@@ -15,6 +15,7 @@ import {
 
 const TarifBlock = ({ title, list, price, primary }) => {
   const dispatch = useDispatch();
+
   return (
     <Wrapper>
       <BlockTitle>{title}</BlockTitle>

@@ -10,6 +10,7 @@ import {
 } from './LogInModal.styled';
 import { useDispatch } from 'react-redux';
 import { toggleRegisterModal } from 'redux/slices/modalSlace';
+import loginValidation from '../../validation/loginValidation';
 
 const LogInModal = () => {
   const dispatch = useDispatch();
@@ -22,7 +23,11 @@ const LogInModal = () => {
           Create an account
         </Link>
       </Paraghraph>
-      <LogInForm forgotPassword btnTitle="Log in" />
+      <LogInForm
+        forgotPassword
+        btnTitle="Log in"
+        validation={loginValidation}
+      />
 
       <AuthBySocialMedia />
 
