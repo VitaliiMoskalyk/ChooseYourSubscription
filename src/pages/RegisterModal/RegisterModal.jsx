@@ -3,7 +3,7 @@ import LogInForm from 'components/LogInForm/LogInForm';
 
 import { PageWrapper, Paraghraph, Title, Link } from './RegisterModal.styled';
 import { useDispatch } from 'react-redux';
-import { toggleAuthModal } from 'redux/slices/modalSlace';
+import { toggleAuthModal, toggleRegisterModal } from 'redux/slices/modalSlace';
 import registerValidation from 'validation/registerValidation';
 import { useState } from 'react';
 import codeValidation from 'validation/codeValidation';
@@ -16,6 +16,12 @@ const post = async values => {
     console.log(response);
   });
 };
+
+const put = async values => {
+  await axios.put('/verify', values).then(function (response) {
+    console.log(response);
+  });
+};
 const RegisterModal = () => {
   const dispatch = useDispatch();
   const [verify, setVerify] = useState(false);
@@ -24,6 +30,13 @@ const RegisterModal = () => {
     await post(e).then(() => setVerify(true));
   };
 
+  const submitVerify = async ({ code, email }) => {
+    console.log({ code, email });
+    await put({ code, email }).then(() => {
+      console.log('succsess!!!');
+      dispatch(toggleRegisterModal());
+    });
+  };
   return verify ? (
     <PageWrapper>
       <Title>Email verification</Title>
@@ -31,7 +44,11 @@ const RegisterModal = () => {
         Please enter the 6-digit verification code that was sent to
         name@gmail,com. The code is valid for 30 minutes.
       </Paraghraph>
-      <LogInForm btnTitle="Sing up" validation={codeValidation} />
+      <LogInForm
+        btnTitle="Sing up"
+        validation={codeValidation}
+        onSubmit={submitVerify}
+      />
     </PageWrapper>
   ) : (
     <PageWrapper>
