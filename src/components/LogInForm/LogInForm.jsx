@@ -5,7 +5,13 @@ import {
   SubmitWrapper,
   ForgotParag,
 } from './LogInForm.styled';
-import InputLabels from 'components/InputLabels';
+import {
+  InputNameLabel,
+  InputEmailLabel,
+  InputPasswordLabel,
+  InputPhoneLabel,
+  InputVerifyLabel,
+} from 'components/InputLabels';
 
 const LogInForm = ({ validation, forgotPassword, btnTitle, onSubmit }) => {
   return (
@@ -19,35 +25,33 @@ const LogInForm = ({ validation, forgotPassword, btnTitle, onSubmit }) => {
         <Wrapper>
           {validation.valid === 'register' && (
             <>
-              <InputLabels.InputNameLabel error={errors.name} />
-              <InputLabels.InputEmailLabel error={errors.email} />
-              <InputLabels.InputPasswordLabel error={errors.password} />
+              <InputNameLabel error={errors.name} />
+              <InputEmailLabel error={errors.email} />
+              <InputPasswordLabel error={errors.password} />
             </>
           )}
 
           {validation.valid === 'subscribe' && (
             <>
-              <InputLabels.InputNameLabel error={errors.name} />
-              <InputLabels.InputEmailLabel error={errors.email} />
-              <InputLabels.InputPhoneLabel error={errors.phone} />
+              <InputNameLabel error={errors.name} />
+              <InputEmailLabel error={errors.email} />
+              <InputPhoneLabel error={errors.phone} />
             </>
           )}
 
           {validation.valid === 'login' && (
             <>
-              <InputLabels.InputEmailLabel error={errors.email} />
-              <InputLabels.InputPasswordLabel error={errors.password} />
+              <InputEmailLabel error={errors.email} />
+              <InputPasswordLabel error={errors.password} />
             </>
           )}
 
           {validation.valid === 'code' && (
             <>
-              <InputLabels.InputVerifyLabel error={errors.code} />
+              <InputVerifyLabel error={errors.code} />
             </>
           )}
-          {/* <ErrorMessage name="email" /> */}
 
-          {/* <ErrorMessage name="password" /> */}
           <SubmitWrapper>
             <Submit type="submit">{btnTitle}</Submit>
             {forgotPassword && (

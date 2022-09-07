@@ -14,7 +14,6 @@ export const Input = styled(Field)`
 
   letter-spacing: 0.01em;
 
-  /* color: #9c99ad; */
   outline: none;
   border: none;
 

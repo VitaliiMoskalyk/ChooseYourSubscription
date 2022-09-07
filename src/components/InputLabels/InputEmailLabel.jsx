@@ -2,7 +2,6 @@ import Svg from 'components/Svg/Svg';
 import { Input, InputWrapper, Label, SvgStyled } from './InputLabels.styled';
 
 export const InputEmailLabel = error => {
-  console.log(error.error);
   return (
     <InputWrapper>
       <Label htmlFor="email">Email Address</Label>

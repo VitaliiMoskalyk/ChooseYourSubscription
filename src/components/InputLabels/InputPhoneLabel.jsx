@@ -4,7 +4,6 @@ export const InputPhoneLabel = error => {
   return (
     <InputWrapper>
       <Label htmlFor="phone">Phone</Label>
-
       <Input
         error={error}
         id="phone"

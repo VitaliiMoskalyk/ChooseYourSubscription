@@ -39,18 +39,22 @@ export const SiteNavigationWrapper = styled.div`
   width: 419px;
 `;
 
-export const SiteNavTitle = styled.span`
+export const SiteNavTitle = styled.div`
   padding-right: 12px;
+  height: 100%;
 `;
 
 export const SubscriptionsWrapper = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   flex-direction: row;
   margin-left: 116px;
+  cursor: pointer;
 `;
 
 export const LanguageWrapper = styled.div`
+  position: relative;
   display: flex;
   align-items: center;
   flex-wrap: nowrap;

@@ -18,6 +18,8 @@ import LanguageSwitcher from 'components/LanguageSwitcher/LanguageSwitcher';
 
 import { useSelector, useDispatch } from 'react-redux';
 import { toggleMenuModal } from 'redux/slices/modalSlace';
+import PageNavigation from 'components/PageNavigation/PageNavigation';
+import SubMenu from 'components/SubMenu/SubMenu';
 
 const Header = () => {
   const onlyWidth = useWindowWidth();
@@ -35,6 +37,9 @@ const Header = () => {
             <SubscriptionsWrapper>
               <SiteNavTitle>Subscriptions</SiteNavTitle>
               <Svg icon="icon-Lang" width="12" fill="#333333" height="12" />
+              <SubMenu>
+                <PageNavigation />
+              </SubMenu>
             </SubscriptionsWrapper>
 
             <SiteNavigationWrapper>
@@ -47,6 +52,7 @@ const Header = () => {
 
             <LanguageWrapper>
               <LanguageSwitcher fill="#333333" />
+              <SubMenu>English Russian Ukrainian</SubMenu>
             </LanguageWrapper>
 
             <ButtonWrapper>

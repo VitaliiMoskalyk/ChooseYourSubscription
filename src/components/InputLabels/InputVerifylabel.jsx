@@ -4,7 +4,6 @@ export const InputVerifyLabel = error => {
   return (
     <InputWrapper>
       <Label htmlFor="code">Email verification code</Label>
-
       <Input
         error={error}
         id="code"

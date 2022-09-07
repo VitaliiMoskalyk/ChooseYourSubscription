@@ -1,6 +1,5 @@
 import AuthBySocialMedia from 'components/AuthBySocialMedia/AuthBySocialMedia';
 import LogInForm from 'components/LogInForm/LogInForm';
-
 import { PageWrapper, Paraghraph, Title, Link } from './RegisterModal.styled';
 import { useDispatch } from 'react-redux';
 import { toggleAuthModal, toggleRegisterModal } from 'redux/slices/modalSlace';
@@ -22,6 +21,7 @@ const put = async values => {
     console.log(response);
   });
 };
+
 const RegisterModal = () => {
   const dispatch = useDispatch();
   const [verify, setVerify] = useState(false);
@@ -37,6 +37,7 @@ const RegisterModal = () => {
       dispatch(toggleRegisterModal());
     });
   };
+
   return verify ? (
     <PageWrapper>
       <Title>Email verification</Title>

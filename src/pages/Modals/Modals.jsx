@@ -1,9 +1,9 @@
 import { useWindowWidth } from '@react-hook/window-size';
 import Modal from 'components/Modal/Modal';
-import LogInModal from 'pages/LogInModal/LogInModal';
-import MobileModal from 'pages/MobileModal/MobileModal';
-import RegisterModal from 'pages/RegisterModal/RegisterModal';
-import SubscribeModal from 'pages/SubscribeModal/SubscribeModal';
+import LogInModal from 'modals/LogInModal/LogInModal';
+import MobileModal from 'modals/MobileModal/MobileModal';
+import RegisterModal from 'modals/RegisterModal/RegisterModal';
+import SubscribeModal from 'modals/SubscribeModal/SubscribeModal';
 import { useDispatch, useSelector } from 'react-redux';
 import {
   toggleAuthModal,
