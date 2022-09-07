@@ -6,10 +6,9 @@ const SubMenu = ({ children }) => {
 
   useEffect(() => {
     window.addEventListener('keydown', close);
-    document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+
     return () => {
       window.removeEventListener('keydown', close);
-      document.getElementsByTagName('body')[0].style.overflow = 'auto';
     };
   });
 
