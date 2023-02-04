@@ -31,7 +31,6 @@ const Header = () => {
     <>
       <Head>
         <LogoTitle logo={Logo} title="DiscountsOnServices" />
-
         {onlyWidth > 1439 && (
           <>
             <SubscriptionsWrapper>
