@@ -1,6 +1,7 @@
-import HelloPic from '../../images/MainPic.jpg';
+import HelloPic from '../../images/MainPic.svg';
 import Button from 'components/Button/Button';
 import ImageBlock from 'components/ImageBlock/ImageBlock';
+
 import {
   BlueBlock,
   ImgWrapper,
