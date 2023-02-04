@@ -1,5 +1,5 @@
 import AboutPic from '../../images/About.svg';
-import MainLogo from '../../images/logo.svg';
+import MainLogo from '../../images/mainLogo.svg';
 import ImageBlock from 'components/ImageBlock/ImageBlock';
 
 import {

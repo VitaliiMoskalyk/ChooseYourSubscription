@@ -1,5 +1,5 @@
 import Svg from 'components/Svg/Svg';
-import Logo from '../../images/logo.svg';
+import Logo from '../../images/mainLogo.svg';
 import {
   Head,
   SocialMediaWrapper,
