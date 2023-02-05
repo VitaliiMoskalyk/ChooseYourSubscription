@@ -11,7 +11,7 @@ import {
 } from './ProviderBlock.styled';
 import Svg from 'components/Svg/Svg';
 
-const ProviderBlock = ({ icon, title, subscr, background }) => {
+const ProviderBlock = ({ icon, title, subscr, background, onClick }) => {
   const onlyWidth = useWindowWidth();
   return (
     <Border>
@@ -25,7 +25,7 @@ const ProviderBlock = ({ icon, title, subscr, background }) => {
         </Title3>
         {(onlyWidth < 767 || onlyWidth > 1440) && <Paragr>{subscr}</Paragr>}
         <ButtonWrapper>
-          <Button blue>
+          <Button blue onClick={onClick}>
             <ButtonTitle>Learn more</ButtonTitle>
           </Button>
         </ButtonWrapper>

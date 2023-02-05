@@ -3,6 +3,9 @@ import styled from '@emotion/styled';
 export const LogoWrapper = styled.div`
   display: flex;
   align-items: center;
+  :hover {
+    cursor: pointer;
+  }
 `;
 
 export const Title = styled.span`

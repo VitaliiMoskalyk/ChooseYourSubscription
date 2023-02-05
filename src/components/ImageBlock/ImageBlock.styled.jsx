@@ -5,7 +5,7 @@ export const ImgWrapper = styled.div`
   border-radius: 18.5946px;
   width: 100%;
   height: 100%;
-
+  background-color: #fff;
   overflow: hidden;
 
   @media (min-width: 768px) {
