@@ -19,6 +19,11 @@ export const Border = styled.div`
     flex-direction: row-reverse;
     height: 342px;
   }
+  transition: all 0.2s ease-in-out;
+  :hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const ContentBox = styled.div`

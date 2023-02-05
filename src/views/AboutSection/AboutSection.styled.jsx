@@ -27,6 +27,12 @@ export const BorderWrap = styled.div`
     width: 592px;
     height: 535px;
   }
+
+  transition: all 0.2s ease-in-out;
+  :hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const Paragr = styled.p`

@@ -26,6 +26,12 @@ export const Wrapper = styled.div`
     width: 389px;
     padding: 60px 40px 40px 40px;
   }
+
+  transition: all 0.2s ease-in-out;
+  :hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const Hr = styled.hr`

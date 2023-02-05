@@ -1,50 +1,43 @@
 import Button from 'components/Button/Button';
-import Svg from 'components/Svg/Svg';
+import Dropdown from 'components/Dropdown/Dropdown';
 
-import { Title2, BorderWrap, Title4, WrapBtn, Section } from './FAQ.styled';
+import { Title2, WrapBtn, Section } from './FAQ.styled';
 
 const FAQSection = () => {
   return (
     <Section id="FAQ">
       <Title2>FAQ</Title2>
       <li>
-        <BorderWrap>
-          <Title4>
-            The set time has passed, but the invoice has not yet arrived, what
-            should I do?
-          </Title4>
-          <Svg width="40" height="40" icon="icon-Open" />
-        </BorderWrap>
+        <Dropdown
+          answer="If the accounts have not been filed but the accountant is working on them – let them know of the new-found invoice and they'll tell you how to deal with it."
+          question="The set time has passed, but the invoice has not yet arrived, what
+              should I do?"
+        />
       </li>
       <li>
-        <BorderWrap>
-          <Title4>
-            Can I change my Netflix account email and password after purchase?
-          </Title4>
-          <Svg width="40" height="40" icon="icon-Open" />
-        </BorderWrap>
+        <Dropdown
+          answer="Learn how to update the email address, phone number, password, shipping address, or method of payment for your Netflix account."
+          question="Can I change my Netflix account email and password after purchase?"
+        />
       </li>
 
       <li>
-        <BorderWrap>
-          <Title4>Can I add a phone number for password recovery?</Title4>
-          <Svg width="40" height="40" icon="icon-Open" />
-        </BorderWrap>
+        <Dropdown
+          answer="Set up a recovery phone number or email address. To make sure you can get back into your Google Account if you ever can't sign in, add recovery information."
+          question="Can I add a phone number for password recovery?"
+        />
       </li>
       <li>
-        <BorderWrap>
-          <Title4>
-            How soon will I receive the account information I ordered?
-          </Title4>
-          <Svg width="40" height="40" icon="icon-Open" />
-        </BorderWrap>
+        <Dropdown
+          answer="Direct to Bank deposit typically takes between 2 to 5 business days, but could vary, depending on country. Bill Payment may vary depending on the selected speed ..."
+          question="How soon will I receive the account information I ordered?"
+        />
       </li>
       <li>
-        <BorderWrap>
-          <Title4>How to pay?</Title4>
-          <Svg width="40" height="40" icon="icon-Open" />
-          {/* <Parag>Payment options we currently have: PayPal, Bitcoin.</Parag> */}
-        </BorderWrap>
+        <Dropdown
+          answer="Payment options we currently have: PayPal, Bitcoin."
+          question="How to pay?"
+        />
       </li>
       <WrapBtn>
         <Button primary>Support</Button>

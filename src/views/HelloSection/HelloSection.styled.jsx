@@ -33,6 +33,12 @@ export const BlueBlock = styled.div`
     height: 500px;
     padding: 114px 50px;
   }
+
+  transition: all 0.2s ease-in-out;
+  :hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const Title2 = styled.h2`

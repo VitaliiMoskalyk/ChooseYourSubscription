@@ -21,6 +21,12 @@ export const InviteBlock = styled.div`
   @media (min-width: ${props => props.theme.width.desktop}) {
     padding: 40px 80px;
   }
+
+  transition: all 0.2s ease-in-out;
+  :hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+  }
 `;
 
 export const Title = styled.h3`

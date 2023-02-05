@@ -24,7 +24,7 @@ export const BorderWrap = styled.div`
 
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
 `;
 
 export const Parag = styled.p`
@@ -59,4 +59,9 @@ export const WrapBtn = styled.div`
 export const Section = styled.section`
   height: auto;
   padding-bottom: 80px;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
 `;
