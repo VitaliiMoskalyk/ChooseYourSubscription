@@ -51,7 +51,6 @@ const Header = () => {
 
             <LanguageWrapper>
               <LanguageSwitcher fill="#333333" />
-              <SubMenu>English Russian Ukrainian</SubMenu>
             </LanguageWrapper>
 
             <ButtonWrapper>
