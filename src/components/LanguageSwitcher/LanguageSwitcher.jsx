@@ -1,4 +1,3 @@
-import SubMenu from 'components/SubMenu/SubMenu';
 import { useState } from 'react';
 import { LanguageBlock, LanguageTitle, Wrap } from './LanguageSwitcher.styled';
 
