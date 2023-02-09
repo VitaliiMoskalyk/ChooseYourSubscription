@@ -5,6 +5,8 @@ export const LanguageTitle = styled.span`
 `;
 
 export const LanguageBlock = styled.ul`
+  position: absolute;
+  top: 45px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,8 +23,16 @@ export const LanguageBlock = styled.ul`
   /* black 2 */
 
   color: #171717;
+  box-shadow: 0px 20px 48px rgba(177, 177, 177, 0.4);
+  border-radius: 16px;
+  background-color: #fff;
+  height: 169px;
+  width: fit-content;
+  padding: 27px 23px;
 `;
 
-export const Wrap = styled.span`
+export const Wrap = styled.div`
   position: relative;
+  display: flex;
+  flex-direction: row;
 `;

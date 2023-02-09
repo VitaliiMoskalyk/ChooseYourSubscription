@@ -6,7 +6,7 @@ export const Block = styled.div`
   box-shadow: 0px 20px 48px rgba(177, 177, 177, 0.4);
   border-radius: 16px;
   background-color: #fff;
-  height: 205px;
+  height: 169px;
   width: fit-content;
   padding: 27px 23px;
 `;
